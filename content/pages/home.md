@@ -1,22 +1,9 @@
 ---
 title: Tina Cloud Starter
 blocks:
-  - headline: Welcome to the Tina Starter
-    text: >
-      ## **Editors**
-
-
-      **Click this box to start editing it**. You will see the matching field
-      appear in the left sidebar for you to make changes. The edits will show in
-      this live preview. In that left panel, you can also navigate around the
-      page to change what you are editing (or just click a component here in the
-      preview, like you did before).
-
-
-      **Clicking 'Save' won't do anything in this demo** - but on your site it
-      will save the changes immediately or send an approval request to your team
-      for review.
-    text2: >
+  - title: Welcome to the Tina Starter
+    subtitle: Welcome to the Tina Starter
+    body: >
       ## Developers
 
 
@@ -36,9 +23,7 @@ blocks:
         link: /posts
     image:
       src: /uploads/unsplash-75EFpyXu3Wg.jpg
-      alt: >-
-        Photo of palm trees at sunset by Adam Birkett -
-        unsplash.com/photos/75EFpyXu3Wg
+      alt: Photo of palm trees at sunset by Adam Birkett
     color: default
     _template: hero
   - items:
@@ -47,8 +32,7 @@ blocks:
           color: red
           style: float
         title: Amazing Feature
-        text: >-
-          Aliquam blandit felis rhoncus, eleifend ipsum in, condimentum nibh.
+        text: Aliquam blandit felis rhoncus, eleifend ipsum in, condimentum nibh.
           Praesent ac faucibus risus, eu lacinia enim.
       - icon:
           name: BiLike

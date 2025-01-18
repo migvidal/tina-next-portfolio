@@ -19,7 +19,7 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
     pink: "from-pink-400 to-pink-600",
     purple: "from-purple-400 to-purple-600",
     orange: "from-orange-300 to-orange-600",
-    yellow: "from-yellow-400 to-yellow-600",
+    yellow: "from-yellow-400 to-yellow-600"
   };
 
   return (
@@ -29,19 +29,19 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
         className="grid grid-cols-1 md:grid-cols-5 gap-14 items-start justify-center"
       >
         <div className="row-start-2 md:row-start-1 md:col-span-5 text-center md:text-left">
-          {data.tagline && (
+          {data.title && (
             <h2
-              data-tina-field={tinaField(data, "tagline")}
-              className="relative inline-block px-3 py-1 mb-8 text-md font-bold tracking-wide title-font z-20"
+              data-tina-field={tinaField(data, "title")}
+              className="w-full relative mb-10 text-5xl font-extrabold tracking-normal leading-tight title-font"
             >
-              {data.tagline}
+              {data.title}
               <span className="absolute w-full h-full left-0 top-0 rounded-full -z-1 bg-current opacity-7"></span>
             </h2>
           )}
-          {data.headline && (
+          {data.subtitle && (
             <h3
-              data-tina-field={tinaField(data, "headline")}
-              className={`w-full relative mb-10 text-5xl font-extrabold tracking-normal leading-tight title-font`}
+              data-tina-field={tinaField(data, "subtitle")}
+              className={"relative inline-block px-3 py-1 mb-8 text-md font-bold tracking-wide title-font z-20"}
             >
               <span
                 className={`bg-clip-text text-transparent bg-gradient-to-r  ${
@@ -50,23 +50,23 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
                     : headlineColorClasses["blue"]
                 }`}
               >
-                {data.headline}
+                {data.subtitle}
               </span>
             </h3>
           )}
           <div className="flex flex-col md:flex-row gap-6">
             <div className="flex flex-col md:w-3/5">
-              {data.text && (
+              {data.body && (
                 <div
-                  data-tina-field={tinaField(data, "text")}
+                  data-tina-field={tinaField(data, "body")}
                   className={`prose prose-lg mx-auto md:mx-0 mb-10 ${
                     data.color === "primary"
                       ? `prose-primary`
                       : `dark:prose-dark`
                   }`}
                 >
-                  <TinaMarkdown 
-                    content={data.text}
+                  <TinaMarkdown
+                    content={data.body}
                     components={{
                       mermaid({ value }) {
                         return <MermaidElement value={value} />;
@@ -92,23 +92,6 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
               </div>
             )}
           </div>
-          {data.text2 && (
-            <div
-              data-tina-field={tinaField(data, "text2")}
-              className={`prose prose-lg mx-auto md:mx-0 mb-10 ${
-                data.color === "primary" ? `prose-primary` : `dark:prose-dark`
-              }`}
-            >
-              <TinaMarkdown 
-                content={data.text2}
-                components={{
-                  mermaid({ value }) {
-                    return <MermaidElement value={value} />;
-                  }
-                }}
-              />
-            </div>
-          )}
           {data.actions && (
             <div className="mt-10">
               <Actions
@@ -130,51 +113,46 @@ export const heroBlockSchema: Template = {
   ui: {
     previewSrc: "/blocks/hero.png",
     defaultItem: {
-      tagline: "Here's some text above the other text",
-      headline: "This Big Text is Totally Awesome",
-      text: "Phasellus scelerisque, libero eu finibus rutrum, risus risus accumsan libero, nec molestie urna dui a leo.",
-    },
+      title: "I'm Alba Vidal",
+      subtitle: "Audiovisual translator.",
+      body: "Phasellus scelerisque, libero eu finibus rutrum, risus risus accumsan libero, nec molestie urna dui a leo."
+    }
   },
   fields: [
     {
-      type: "string",
-      label: "Tagline",
-      name: "tagline",
+      label: "Title",
+      name: "title",
+      type: "string"
     },
     {
-      type: "string",
-      label: "Headline",
-      name: "headline",
+      label: "Subtitle",
+      name: "subtitle",
+      type: "string"
     },
     {
-      label: "Text-1",
-      name: "text",
-      type: "rich-text",
+      label: "Body text",
+      name: "body",
+      type: "rich-text"
     },
     {
-      type: "rich-text",
-      label: "Text-2",
-      name: "text2",
-    },
-    {
-      label: "Actions",
       name: "actions",
       type: "object",
+      label: "Actions",
       list: true,
       ui: {
         defaultItem: {
           label: "Action Label",
           type: "button",
           icon: true,
-          link: "/",
+          link: "/"
         },
-        itemProps: (item) => ({ label: item.label }),
+        itemProps: (item) => ({ label: item.label })
       },
       fields: [
         {
           label: "Label",
           name: "label",
-          type: "string",
+          type: "string"
         },
         {
           label: "Type",
@@ -182,20 +160,20 @@ export const heroBlockSchema: Template = {
           type: "string",
           options: [
             { label: "Button", value: "button" },
-            { label: "Link", value: "link" },
-          ],
+            { label: "Link", value: "link" }
+          ]
         },
         {
           label: "Icon",
           name: "icon",
-          type: "boolean",
+          type: "boolean"
         },
         {
           label: "Link",
           name: "link",
-          type: "string",
-        },
-      ],
+          type: "string"
+        }
+      ]
     },
     {
       type: "object",
@@ -205,14 +183,31 @@ export const heroBlockSchema: Template = {
         {
           name: "src",
           label: "Image Source",
-          type: "image",
+          type: "image"
         },
         {
           name: "alt",
           label: "Alt Text",
-          type: "string",
+          type: "string"
+        }
+      ]
+    },
+    {
+      type: "object",
+      label: "Image on mouse hover",
+      name: "image_on_hover",
+      fields: [
+        {
+          name: "src",
+          label: "Image Source",
+          type: "image"
         },
-      ],
+        {
+          name: "alt",
+          label: "Alt Text",
+          type: "string"
+        }
+      ]
     },
     {
       type: "string",
@@ -221,8 +216,8 @@ export const heroBlockSchema: Template = {
       options: [
         { label: "Default", value: "default" },
         { label: "Tint", value: "tint" },
-        { label: "Primary", value: "primary" },
-      ],
-    },
-  ],
+        { label: "Primary", value: "primary" }
+      ]
+    }
+  ]
 };
