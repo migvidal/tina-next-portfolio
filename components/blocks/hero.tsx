@@ -19,7 +19,7 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
     pink: "from-pink-400 to-pink-600",
     purple: "from-purple-400 to-purple-600",
     orange: "from-orange-300 to-orange-600",
-    yellow: "from-yellow-400 to-yellow-600"
+    yellow: "from-yellow-400 to-yellow-600",
   };
 
   return (
@@ -70,7 +70,7 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
                     components={{
                       mermaid({ value }) {
                         return <MermaidElement value={value} />;
-                      }
+                      },
                     }}
                   />
                 </div>
@@ -113,26 +113,26 @@ export const heroBlockSchema: Template = {
   ui: {
     previewSrc: "/blocks/hero.png",
     defaultItem: {
-      title: "I'm Alba Vidal",
-      subtitle: "Audiovisual translator.",
-      body: "Phasellus scelerisque, libero eu finibus rutrum, risus risus accumsan libero, nec molestie urna dui a leo."
-    }
+      title: "This is a Hero section",
+      subtitle: "This is a subtitle",
+      body: "A small paragraph with more information",
+    },
   },
   fields: [
     {
       label: "Title",
       name: "title",
-      type: "string"
+      type: "string",
     },
     {
       label: "Subtitle",
       name: "subtitle",
-      type: "string"
+      type: "string",
     },
     {
       label: "Body text",
       name: "body",
-      type: "rich-text"
+      type: "rich-text",
     },
     {
       name: "actions",
@@ -144,15 +144,15 @@ export const heroBlockSchema: Template = {
           label: "Action Label",
           type: "button",
           icon: true,
-          link: "/"
+          link: "/",
         },
-        itemProps: (item) => ({ label: item.label })
+        itemProps: (item) => ({ label: item.label }),
       },
       fields: [
         {
           label: "Label",
           name: "label",
-          type: "string"
+          type: "string",
         },
         {
           label: "Type",
@@ -160,20 +160,20 @@ export const heroBlockSchema: Template = {
           type: "string",
           options: [
             { label: "Button", value: "button" },
-            { label: "Link", value: "link" }
-          ]
+            { label: "Link", value: "link" },
+          ],
         },
         {
           label: "Icon",
           name: "icon",
-          type: "boolean"
+          type: "boolean",
         },
         {
           label: "Link",
           name: "link",
-          type: "string"
-        }
-      ]
+          type: "string",
+        },
+      ],
     },
     {
       type: "object",
@@ -183,14 +183,14 @@ export const heroBlockSchema: Template = {
         {
           name: "src",
           label: "Image Source",
-          type: "image"
+          type: "image",
         },
         {
           name: "alt",
           label: "Alt Text",
-          type: "string"
-        }
-      ]
+          type: "string",
+        },
+      ],
     },
     {
       type: "object",
@@ -200,14 +200,14 @@ export const heroBlockSchema: Template = {
         {
           name: "src",
           label: "Image Source",
-          type: "image"
+          type: "image",
         },
         {
           name: "alt",
           label: "Alt Text",
-          type: "string"
-        }
-      ]
+          type: "string",
+        },
+      ],
     },
     {
       type: "string",
@@ -216,8 +216,8 @@ export const heroBlockSchema: Template = {
       options: [
         { label: "Default", value: "default" },
         { label: "Tint", value: "tint" },
-        { label: "Primary", value: "primary" }
-      ]
-    }
-  ]
+        { label: "Primary", value: "primary" },
+      ],
+    },
+  ],
 };
