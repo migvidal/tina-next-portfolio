@@ -1,30 +1,13 @@
 ---
 title: Tina Cloud Starter
 blocks:
-  - title: Welcome to the Tina Starter
-    subtitle: Welcome to the Tina Starter
-    body: >
-      ## Developers
-
-
-      This project is set up to show you the basics of working with Tina. You're
-      looking at the landing page, which pulls content from
-      `content/pages/home.md`, components from components/blocks, and puts them
-      all together in `pages/[filename].tsx`, all based on a config
-      `tina/config.tsx`.
-    actions:
-      - label: Get Started
-        type: button
-        icon: true
-        link: /about
-      - label: Read Blog
-        type: link
-        icon: false
-        link: /posts
+  - title: I'm Alba Vidal
+    subtitle: Audiovisual translator.
+    body: |
+      This is my recital, I think it's very vital
     image:
-      src: /uploads/unsplash-75EFpyXu3Wg.jpg
-      alt: Photo of palm trees at sunset by Adam Birkett
-    color: default
+      src: /uploads/unsplash-lylCw4zcA7I.jpg
+      alt: Macaw caw
     _template: hero
   - items:
       - icon:
@@ -32,7 +15,8 @@ blocks:
           color: red
           style: float
         title: Amazing Feature
-        text: Aliquam blandit felis rhoncus, eleifend ipsum in, condimentum nibh.
+        text: >-
+          Aliquam blandit felis rhoncus, eleifend ipsum in, condimentum nibh.
           Praesent ac faucibus risus, eu lacinia enim.
       - icon:
           name: BiLike
