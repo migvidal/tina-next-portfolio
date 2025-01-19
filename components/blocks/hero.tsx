@@ -85,14 +85,13 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
               )}
             </div>
             <div className="col-span-12 md:col-span-6">
-              <div className="md:relative">
+              <div className="md:relative -mt-16">
                 {data.image && (
                   <div
                     data-tina-field={tinaField(data.image, "src")}
-                    className="relative"
+                    className="w-full h-auto rounded-lg mx-auto hidden md:block absolute md:opacity-100 md:hover:opacity-0 transition-opacity duration-1000"
                   >
                     <Image
-                      className="w-full h-auto rounded-lg mx-auto hidden md:block absolute md:opacity-100 md:hover:opacity-0 transition-opacity duration-1000"
                       style={{ objectFit: "cover" }}
                       alt={data.image.alt}
                       src={data.image.src}
@@ -104,10 +103,9 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
                 {data.image_on_hover && (
                   <div
                     data-tina-field={tinaField(data.image, "src")}
-                    className="relative flex-shrink-0 md:w-2/5 flex justify-center"
+                    className="mx-auto block md:absolute md:opacity-0 md:hover:opacity-100 transition-opacity duration-1000"
                   >
                     <Image
-                      className="mx-auto block md:absolute md:opacity-0 md:hover:opacity-100 transition-opacity duration-1000"
                       style={{ objectFit: "cover" }}
                       alt={data.image_on_hover.alt}
                       src={data.image_on_hover.src}

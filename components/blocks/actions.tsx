@@ -52,10 +52,10 @@ const linkButtonColorClasses = {
 };
 
 export const Actions = ({
-  parentColor = "default",
-  className = "",
-  actions,
-}: {
+                          parentColor = "default",
+                          className = "",
+                          actions,
+                        }: {
   parentColor: string;
   className: string;
   actions: PageBlocksHeroActions[];
@@ -64,14 +64,14 @@ export const Actions = ({
   return (
     <div className={className}>
       {actions &&
-        actions.map(function (action, index) {
+        actions.map(function(action, index) {
           let element = null;
           if (action.type === "button") {
             element = (
               <Link key={index} href={action.link ? action.link : "/"}>
                 <button
                   data-tina-field={tinaField(action)}
-                  className={`z-10 relative flex items-center px-7 py-3 font-semibold text-lg transition duration-150 ease-out  rounded-lg transform focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 whitespace-nowrap ${
+                  className={`z-10 relative flex items-center px-7 py-3 font-semibold text-lg transition duration-150 ease-out rounded-full transform focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 whitespace-nowrap ${
                     parentColor === "primary"
                       ? invertedButtonColorClasses[theme.color]
                       : buttonColorClasses[theme.color]

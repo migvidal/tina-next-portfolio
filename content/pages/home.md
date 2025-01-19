@@ -10,8 +10,10 @@ blocks:
         icon: true
         link: /
     image:
-      src: /uploads/unsplash-lylCw4zcA7I.jpg
+      src: /uploads/working_without_fire.png
       alt: Macaw caw
+    image_on_hover:
+      src: /uploads/working_with_fire.png
     _template: hero
   - items:
       - icon:
