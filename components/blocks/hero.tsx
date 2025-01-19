@@ -9,6 +9,7 @@ import { Section } from "../layout/section";
 import { Container } from "../layout/container";
 import { Actions } from "./actions";
 import MermaidElement from "../mermaid-renderer";
+import { imageSchema } from "./image-schema";
 
 export const Hero = ({ data }: { data: PageBlocksHero }) => {
   const headlineColorClasses = {
@@ -123,6 +124,8 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
   );
 };
 
+// @ts-ignore
+// @ts-ignore
 export const heroBlockSchema: Template = {
   name: "hero",
   label: "Hero",
@@ -191,23 +194,8 @@ export const heroBlockSchema: Template = {
         },
       ],
     },
-    {
-      type: "object",
-      label: "Image",
-      name: "image",
-      fields: [
-        {
-          name: "src",
-          label: "Image Source",
-          type: "image",
-        },
-        {
-          name: "alt",
-          label: "Alt Text",
-          type: "string",
-        },
-      ],
-    },
+    //@ts-ignore
+    imageSchema,
     {
       type: "object",
       label: "Image on mouse hover",

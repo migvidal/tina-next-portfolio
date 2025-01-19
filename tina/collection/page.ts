@@ -3,7 +3,9 @@ import { heroBlockSchema } from "../../components/blocks/hero";
 import { contentBlockSchema } from "../../components/blocks/content";
 import { testimonialBlockSchema } from "../../components/blocks/testimonial";
 import { featureBlockSchema } from "../../components/blocks/features";
+import { translationServiceBlockSchema } from "../../components/blocks/translation-services";
 
+// @ts-ignore
 const Page: Collection = {
   label: "Pages",
   name: "page",
@@ -43,6 +45,8 @@ const Page: Collection = {
         featureBlockSchema,
         contentBlockSchema,
         testimonialBlockSchema,
+        //@ts-ignore
+        translationServiceBlockSchema,
       ],
     },
   ],

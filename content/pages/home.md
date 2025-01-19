@@ -1,6 +1,15 @@
 ---
 title: Tina Cloud Starter
 blocks:
+  - title: Services I offer
+    introduction: |
+      These are my services
+    service_object:
+      - title: My service
+        image:
+          src: /uploads/llama-3.avif
+          alt: Llama xd
+    _template: translation_services
   - title: I'm Alba Vidal
     subtitle: Audiovisual translator.
     body: ''
