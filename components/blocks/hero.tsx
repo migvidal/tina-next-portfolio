@@ -26,23 +26,24 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
     <Section color={data.color}>
       <Container
         size="large"
-        className="grid grid-cols-1 md:grid-cols-5 gap-14 items-start justify-center"
       >
-        <div className="row-start-2 md:row-start-1 md:col-span-5 text-center md:text-left">
-          {data.title && (
-            <h2
-              data-tina-field={tinaField(data, "title")}
-              className="w-full relative mb-10 text-5xl font-extrabold tracking-normal leading-tight title-font"
-            >
-              {data.title}
-              <span className="absolute w-full h-full left-0 top-0 rounded-full -z-1 bg-current opacity-7"></span>
-            </h2>
-          )}
-          {data.subtitle && (
-            <h3
-              data-tina-field={tinaField(data, "subtitle")}
-              className={"relative inline-block px-3 py-1 mb-8 text-md font-bold tracking-wide title-font z-20"}
-            >
+        <div className="text-center md:text-left">
+          <div className="flex flex-col md:flex-row gap-6">
+            <div className="flex flex-col md:w-3/5">
+              {data.title && (
+                <h2
+                  data-tina-field={tinaField(data, "title")}
+                  className="w-full relative mb-10 text-5xl font-extrabold tracking-normal leading-tight title-font"
+                >
+                  {data.title}
+                  <span className="absolute w-full h-full left-0 top-0 rounded-full -z-1 bg-current opacity-7"></span>
+                </h2>
+              )}
+              {data.subtitle && (
+                <h3
+                  data-tina-field={tinaField(data, "subtitle")}
+                  className={"relative inline-block px-3 py-1 mb-8 text-md font-bold tracking-wide title-font z-20"}
+                >
               <span
                 className={`bg-clip-text text-transparent bg-gradient-to-r  ${
                   data.color === "primary"
@@ -52,10 +53,8 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
               >
                 {data.subtitle}
               </span>
-            </h3>
-          )}
-          <div className="flex flex-col md:flex-row gap-6">
-            <div className="flex flex-col md:w-3/5">
+                </h3>
+              )}
               {data.body && (
                 <div
                   data-tina-field={tinaField(data, "body")}
