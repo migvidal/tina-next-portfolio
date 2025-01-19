@@ -3,8 +3,12 @@ title: Tina Cloud Starter
 blocks:
   - title: I'm Alba Vidal
     subtitle: Audiovisual translator.
-    body: |
-      This is my recital, I think it's very vital
+    body: ''
+    actions:
+      - label: Contact me!
+        type: button
+        icon: true
+        link: /
     image:
       src: /uploads/unsplash-lylCw4zcA7I.jpg
       alt: Macaw caw

@@ -27,9 +27,9 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
       <Container
         size="large"
       >
-        <div className="text-center md:text-left">
-          <div className="flex flex-col md:flex-row gap-6">
-            <div className="flex flex-col md:w-3/5">
+        <div className="container text-center md:text-left">
+          <div className="grid grid-cols-12">
+            <div className="md:col-span-6">
               {data.title && (
                 <h2
                   data-tina-field={tinaField(data, "title")}
@@ -74,32 +74,51 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
                   />
                 </div>
               )}
+              {data.actions && (
+                <div className="mt-10">
+                  <Actions
+                    className="py-2"
+                    parentColor={data.color}
+                    actions={data.actions}
+                  />
+                </div>
+              )}
             </div>
-            {data.image && (
-              <div
-                data-tina-field={tinaField(data.image, "src")}
-                className="relative flex-shrink-0 md:w-2/5 flex justify-center"
-              >
-                <Image
-                  className="w-full h-auto max-w-full rounded-lg"
-                  style={{ objectFit: "cover" }}
-                  alt={data.image.alt}
-                  src={data.image.src}
-                  width={500}
-                  height={500}
-                />
+            <div className="col-span-12 md:col-span-6">
+              <div className="md:relative">
+                {data.image && (
+                  <div
+                    data-tina-field={tinaField(data.image, "src")}
+                    className="relative"
+                  >
+                    <Image
+                      className="w-full h-auto rounded-lg mx-auto hidden md:block absolute md:opacity-100 md:hover:opacity-0 transition-opacity duration-1000"
+                      style={{ objectFit: "cover" }}
+                      alt={data.image.alt}
+                      src={data.image.src}
+                      width={500}
+                      height={500}
+                    />
+                  </div>
+                )}
+                {data.image_on_hover && (
+                  <div
+                    data-tina-field={tinaField(data.image, "src")}
+                    className="relative flex-shrink-0 md:w-2/5 flex justify-center"
+                  >
+                    <Image
+                      className="mx-auto block md:absolute md:opacity-0 md:hover:opacity-100 transition-opacity duration-1000"
+                      style={{ objectFit: "cover" }}
+                      alt={data.image_on_hover.alt}
+                      src={data.image_on_hover.src}
+                      width={500}
+                      height={500}
+                    />
+                  </div>
+                )}
               </div>
-            )}
-          </div>
-          {data.actions && (
-            <div className="mt-10">
-              <Actions
-                className="justify-center md:justify-start py-2"
-                parentColor={data.color}
-                actions={data.actions}
-              />
             </div>
-          )}
+          </div>
         </div>
       </Container>
     </Section>
