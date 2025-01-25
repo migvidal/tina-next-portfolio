@@ -2,13 +2,42 @@
 title: Tina Cloud Starter
 blocks:
   - title: Services I offer
-    introduction: |
-      These are my services
+    introduction: >
+      As a translator, I work exclusively from English to European Spanish
+      (EN>ES). This has allowed me to focus on the audiovisual field and
+      specialize in it, even though I also offer marketing and generalist
+      translation.
     service_object:
-      - title: My service
+      - title: Subtitling
         image:
-          src: /uploads/llama-3.avif
-          alt: Llama xd
+          src: /uploads/services/ic_process.svg
+          alt: Subtitling
+          adjustment: contain
+          height: '150'
+        bulletpoints:
+          - Subtitle translation (EN>ES)
+          - >-
+            Spanish subtitle creation from scratch, including transcription and
+            time-spotting.
+      - title: Dubbing
+        image:
+          src: /uploads/services/ic_translate.svg
+          height: '150'
+        bulletpoints:
+          - EN>ES translation of dubbing scripts.
+      - title: Accesibility
+        image:
+          src: /uploads/services/ic_document.svg
+          alt: ''
+          adjustment: contain
+          height: '120'
+        bulletpoints:
+          - >-
+            Subtitling for the deaf (SDH)/ Closed captions: in English (from a
+            script or transcript) and EN>ES translation.
+          - >-
+            Audiodescription: creation of scripts in Spanish. What is
+            audiodescription?
     _template: translation_services
   - title: I'm Alba Vidal
     subtitle: Audiovisual translator.
