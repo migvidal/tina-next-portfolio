@@ -7,8 +7,42 @@ import { imageSchema } from "./image-schema";
 import Image from "next/image";
 import {
   PageBlocksTranslation_Services,
-  PageBlocksTranslation_ServicesService_Object,
+  PageBlocksTranslation_ServicesService_Object, PageBlocksTranslation_ServicesService_ObjectBulletpointsDialog,
 } from "../../tina/__generated__/types";
+import { useLayoutEffect, useRef, useState } from "react";
+
+const ExplanationDialog = ({ dialog }: { dialog: PageBlocksTranslation_ServicesService_ObjectBulletpointsDialog }) => {
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  const [isModalOpen, setModalOpen] = useState(false);
+  useLayoutEffect(() => {
+    if (isModalOpen) {
+      dialogRef.current.showModal();
+    } else {
+      dialogRef.current.close();
+    }
+  });
+  return (
+    <>
+      {dialog.link && <button
+        className="underline underline-offset-8 hover:text-cyan-500"
+        onClick={() => setModalOpen(true)}>
+        {dialog.link}
+      </button>}
+      <dialog
+        ref={dialogRef}
+        className="p-8 w-96 rounded-xl bg-theme-light"
+        id="dialog"
+        onClick={() => setModalOpen(false)}
+      >
+        <form method="dialog">
+          {dialog.title && <p className="font-bold pb-2">{dialog.title}</p>}
+          {dialog.content && <TinaMarkdown content={dialog.content} />}
+          <button className="my-4 btn btn-primary rounded-full bg-black text-white p-4">OK</button>
+        </form>
+      </dialog>
+    </>
+  );
+};
 
 const TranslationService = ({ service }: { service: PageBlocksTranslation_ServicesService_Object }) => {
   let imageHeight = (service.image?.height ?? "100") + "px";
@@ -37,11 +71,17 @@ const TranslationService = ({ service }: { service: PageBlocksTranslation_Servic
         >
           {service.title}
         </h4>}
-      <ul className="list-disc list-inside w-full"
-          data-tina-field={tinaField(service, "bulletpoints")}>
+      <ul className="list-disc list-inside w-full">
         {service.bulletpoints &&
           service.bulletpoints.map((bullet, index) =>
-            <li key={index}>{bullet.text}</li>,
+            <li key={index} data-tina-field={tinaField(bullet, "text")}>
+              {bullet.text}
+              {bullet.dialog && (
+                <div>
+                  <ExplanationDialog dialog={bullet.dialog} />
+                </div>
+              )}
+            </li>,
           )
         }
       </ul>
@@ -52,8 +92,7 @@ const TranslationService = ({ service }: { service: PageBlocksTranslation_Servic
 
 export const TranslationServices = ({ data }: { data: PageBlocksTranslation_Services }) => {
   return (
-    <Section className="px-8">
-
+    <Section className="p-8">
       <div
         data-tina-field={tinaField(data)}
         className="flex-1 flex flex-col gap-6 items-center lg:text-left mx-auto"
@@ -98,6 +137,9 @@ export const translationServiceBlockSchema = {
   name: "translation_services",
   ui: {
     previewSrc: "/blocks/features.png",
+    itemProps: (item) => {
+      return { label: item?.title };
+    },
     defaultItem: defaultTranslationService,
   },
   fields: [
@@ -116,6 +158,13 @@ export const translationServiceBlockSchema = {
       name: "service_object",
       type: "object",
       list: true,
+      ui: {
+        previewSrc: "/blocks/features.png",
+        itemProps: (item) => {
+          return { label: item?.title };
+        },
+        defaultItem: defaultTranslationService,
+      },
       fields: [
         {
           label: "Title",
@@ -128,6 +177,14 @@ export const translationServiceBlockSchema = {
           name: "bulletpoints",
           type: "object",
           list: true,
+          ui: {
+            itemProps: (item) => {
+              return { label: item?.text };
+            },
+            defaultItem: {
+              text: "Bulletpoint text"
+            },
+          },
           fields: [
             {
               label: "Text",
@@ -135,12 +192,22 @@ export const translationServiceBlockSchema = {
               type: "string",
             },
             {
-              label: "Explanation dialog",
+              label: "Explanatory dialog",
               name: "dialog",
               type: "object",
+              ui: {
+                itemProps: (item) => {
+                  return { label: `Dialog: ${item?.link}` };
+                },
+                defaultItem: {
+                  link: "Link to the dialog",
+                  title: "The title of the dialog",
+                  content: "A definition, and explanation, or whatever you want",
+                },
+              },
               fields: [
                 {
-                  label: "Link text",
+                  label: "Dialog link text",
                   name: "link",
                   type: "string",
                 },
