@@ -10,6 +10,9 @@ import {
   PageBlocksTranslation_ServicesService_Object, PageBlocksTranslation_ServicesService_ObjectBulletpointsDialog,
 } from "../../tina/__generated__/types";
 import { useLayoutEffect, useRef, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+
 
 const ExplanationDialog = ({ dialog }: { dialog: PageBlocksTranslation_ServicesService_ObjectBulletpointsDialog }) => {
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -71,16 +74,17 @@ const TranslationService = ({ service }: { service: PageBlocksTranslation_Servic
         >
           {service.title}
         </h4>}
-      <ul className="list-disc list-inside w-full">
+      <ul className="w-full">
         {service.bulletpoints &&
           service.bulletpoints.map((bullet, index) =>
-            <li key={index} data-tina-field={tinaField(bullet, "text")}>
-              {bullet.text}
-              {bullet.dialog && (
-                <div>
+            <li key={index} data-tina-field={tinaField(bullet, "text")} className="flex mb-4 pl-6">
+              <FontAwesomeIcon icon={faCheck} className="pr-2 pt-1" />
+              <div>
+                {bullet.text}
+                {bullet.dialog && (
                   <ExplanationDialog dialog={bullet.dialog} />
-                </div>
-              )}
+                )}
+              </div>
             </li>,
           )
         }
@@ -182,7 +186,7 @@ export const translationServiceBlockSchema = {
               return { label: item?.text };
             },
             defaultItem: {
-              text: "Bulletpoint text"
+              text: "Bulletpoint text",
             },
           },
           fields: [
