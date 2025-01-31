@@ -58,7 +58,6 @@ const TranslationService = ({ service }: { service: PageBlocksTranslation_Servic
         >
           <Image
             style={{
-              objectFit: (service.image.adjustment as "contain" | "cover" | "fill" | "none" | "scale-down") ?? "contain",
               height: imageHeight,
             }}
             alt={service.image.alt}

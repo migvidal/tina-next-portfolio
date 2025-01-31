@@ -1,7 +1,6 @@
 const defaultImageSchema = {
   src: "/uploads/image-placeholder.png",
   alt: "",
-  adjustment: "contain",
   height: "200",
 }
 
@@ -24,12 +23,6 @@ export const imageSchema = {
       label: "Alt Text",
       name: "alt",
       type: "string",
-    },
-    {
-      label: "Adjustment",
-      name: "adjustment",
-      type: "string",
-      options: ["contain", "cover", "scale-down"],
     },
     {
       label: "Size",
