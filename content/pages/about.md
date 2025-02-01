@@ -1,6 +1,28 @@
 ---
 title: About
 blocks:
+  - title: My photos
+    introduction: >
+      Here you can find every film and program I have translated.
+
+
+      I have also translated several websites and conducted proofreading and
+      linguistic QC for various clients.
+    pictures:
+      - src: /uploads/shows/Castlevania_poster.jpg
+        alt: Castlevania
+      - src: /uploads/shows/British_Museum_presents_Hokusai.jpg
+        alt: Hokusai
+        size: large
+      - src: /uploads/shows/Boo_Bitch.jpg
+        alt: 'Boo, Bitch'
+      - src: /uploads/shows/Anne.jpg
+        alt: Anne+
+        size: regular
+      - src: /uploads/shows/AlienXMas.jpg
+        alt: Alien XMas
+        size: regular
+    _template: gallery
   - title: About Me
     pfp:
       src: /uploads/profile_picture.jpeg
@@ -52,25 +74,16 @@ blocks:
       ## Why work with me?
 
 
-      >
-
       > But Alba, isn’t ChatGPT just as good as a human translator these days?
       Isn’t the proofreading function in Word enough? Why should I hire a
       professional?
-
-      >
 
 
       Translation:
 
 
-      >
-
       > But Alba, doesn’t McDonald’s sell cheaper food? Why would I go to a
       Michelin star restaurant, then?
-
-      >
-
 
 
       They are both, in fact, acceptable options. But the choice depends on what

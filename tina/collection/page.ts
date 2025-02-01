@@ -4,6 +4,7 @@ import { contentBlockSchema } from "../../components/blocks/content";
 import { testimonialBlockSchema } from "../../components/blocks/testimonial";
 import { featureBlockSchema } from "../../components/blocks/features";
 import { translationServiceBlockSchema } from "../../components/blocks/translation-services";
+import { galleryBlockSchema } from "../../components/blocks/gallery";
 
 // @ts-ignore
 const Page: Collection = {
@@ -47,6 +48,7 @@ const Page: Collection = {
         testimonialBlockSchema,
         //@ts-ignore
         translationServiceBlockSchema,
+        galleryBlockSchema,
       ],
     },
   ],

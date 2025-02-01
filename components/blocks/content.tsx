@@ -78,8 +78,8 @@ export const Content = ({ data }: { data: PageBlocksContent }) => {
             )}
             {
               data.links && (
-                data.links.map((link) => (
-                  <div>
+                data.links.map((link, index) => (
+                  <div key={index}>
                     <div
                       className="inline-flex items-center justify-center text-center bg-black rounded text-white h-8 w-8 m-2">
                       <FontAwesomeIcon icon={faLink} />

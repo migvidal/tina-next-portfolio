@@ -118,7 +118,8 @@ export const TranslationServices = ({ data }: { data: PageBlocksTranslation_Serv
           </div>
         )}
         <div className="flex flex-row flex-wrap justify-center gap-16">
-          {data.service_object &&
+          {
+            data.service_object &&
             data.service_object.map(function(service, i) {
               return <TranslationService key={i} service={service} />;
             })

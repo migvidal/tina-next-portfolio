@@ -5,6 +5,7 @@ import { Content } from "./content";
 import { Features } from "./features";
 import { Testimonial } from "./testimonial";
 import { TranslationServices } from "./translation-services";
+import { Gallery } from "./gallery";
 
 export const Blocks = (props: Omit<Page, "id" | "_sys" | "_values">) => {
   return (
@@ -34,6 +35,8 @@ const Block = (block: PageBlocks) => {
       return <Testimonial data={block} />;
     case "PageBlocksTranslation_services":
       return <TranslationServices data={block} />;
+    case "PageBlocksGallery":
+      return <Gallery data={block} />;
     default:
       return null;
   }
