@@ -60,8 +60,8 @@ const TranslationService = ({ service }: { service: PageBlocksTranslation_Servic
             style={{
               height: imageHeight,
             }}
-            alt={service.image.alt}
-            src={service.image.src}
+            alt={service.image?.alt ?? ""}
+            src={service.image?.src ?? ""}
             width={parseInt(imageHeight)}
             height={parseInt(imageHeight)}
           />
@@ -162,7 +162,6 @@ export const translationServiceBlockSchema = {
       type: "object",
       list: true,
       ui: {
-        previewSrc: "/blocks/features.png",
         itemProps: (item) => {
           return { label: item?.title };
         },
