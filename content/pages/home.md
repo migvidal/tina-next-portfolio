@@ -1,6 +1,21 @@
 ---
 title: Tina Cloud Starter
 blocks:
+  - title: I'm Alba Vidal
+    subtitle: Audiovisual translator.
+    body: ''
+    actions:
+      - label: Contact me!
+        type: button
+        icon: true
+        link: /
+    image:
+      src: /uploads/working_without_fire.png
+      alt: Macaw caw
+    image_on_hover:
+      src: /uploads/working_with_fire.png
+    color: tint
+    _template: hero
   - title: Services I offer
     introduction: >
       As a **translator**, I work exclusively from English to European Spanish
@@ -12,7 +27,6 @@ blocks:
         image:
           src: /uploads/services/ic_process.svg
           alt: Subtitling
-          adjustment: contain
           height: '150'
         bulletpoints:
           - text: Subtitle translation (EN>ES)
@@ -29,7 +43,6 @@ blocks:
         image:
           src: /uploads/services/ic_web_document.svg
           alt: ''
-          adjustment: contain
           height: '120'
         bulletpoints:
           - text: >-
@@ -48,7 +61,6 @@ blocks:
         image:
           src: /uploads/services/ic_collab_work.svg
           alt: Proofreading (Spanish)
-          adjustment: contain
           height: '140'
         bulletpoints:
           - text: ' In addition to translation, I offer full proofreading (spelling, grammar and style) of Spanish originals and translations. Don’t let careless punctuation or odd-sounding calques ruin a good text. As we say in Spain, four eyes see more than two. And yes, I am that annoying friend who walks around pointing at street signs because There’s a missing comma!.'
@@ -69,50 +81,5 @@ blocks:
               know. This is why LQA requires solid linguistic knowledge, as well
               as the skill of knowing where to look and what to look for.
     _template: translation_services
-  - title: I'm Alba Vidal
-    subtitle: Audiovisual translator.
-    body: ''
-    actions:
-      - label: Contact me!
-        type: button
-        icon: true
-        link: /
-    image:
-      src: /uploads/working_without_fire.png
-      alt: Macaw caw
-    image_on_hover:
-      src: /uploads/working_with_fire.png
-    _template: hero
-  - items:
-      - icon:
-          name: BiCodeBlock
-          color: red
-          style: float
-        title: Amazing Feature
-        text: >-
-          Aliquam blandit felis rhoncus, eleifend ipsum in, condimentum nibh.
-          Praesent ac faucibus risus, eu lacinia enim.
-      - icon:
-          name: BiLike
-          color: primary
-          style: float
-        title: This Is a Feature
-        text: Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.
-      - icon:
-          name: BiPalette
-          color: green
-          style: float
-        title: Configurable Theme
-        text: >-
-          Edit global theme configuration with Tina. Change your theme's primary
-          color, font, or icon set.
-    color: tint
-    _template: features
-  - quote: >-
-      There are only two hard things in Computer Science: cache invalidation and
-      naming things.
-    author: Phil Karlton
-    color: primary
-    _template: testimonial
 ---
 

@@ -34,7 +34,7 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
               {data.title && (
                 <h2
                   data-tina-field={tinaField(data, "title")}
-                  className="w-full relative mb-10 text-5xl font-extrabold tracking-normal leading-tight title-font"
+                  className="w-full relative text-5xl font-extrabold tracking-normal leading-tight title-font"
                 >
                   {data.title}
                   <span className="absolute w-full h-full left-0 top-0 rounded-full -z-1 bg-current opacity-7"></span>
@@ -43,7 +43,7 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
               {data.subtitle && (
                 <h3
                   data-tina-field={tinaField(data, "subtitle")}
-                  className={"relative inline-block px-3 py-1 mb-8 text-md font-bold tracking-wide title-font z-20"}
+                  className={"relative inline-block px-3 py-1 text-md font-bold tracking-wide title-font z-20"}
                 >
               <span
                 className={`bg-clip-text text-transparent bg-gradient-to-r  ${

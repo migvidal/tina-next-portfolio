@@ -9,6 +9,10 @@
     "color": "default",
     "nav": [
       {
+        "href": "portfolio",
+        "label": "Portfolio"
+      },
+      {
         "href": "",
         "label": "Home"
       },
@@ -25,9 +29,9 @@
   "footer": {
     "color": "default",
     "social": {
-      "facebook": "/",
-      "twitter": "/",
-      "instagram": "/"
+      "facebook": "",
+      "twitter": "https://x.com/albavidalf",
+      "instagram": ""
     }
   },
   "theme": {
