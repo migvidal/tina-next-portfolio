@@ -4,7 +4,7 @@ import { cn } from "../../lib/utils";
 import { Container } from "../layout/container";
 import Link from "next/link";
 import { Icon } from "../icon";
-import { FaFacebookF, FaGithub, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { useLayout } from "../layout/layout-context";
 import { RawRenderer } from "../raw-renderer";
@@ -68,6 +68,21 @@ export default function Footer() {
             />
           </Link>
           <div className="flex gap-4">
+            {footer.social && footer.social.email && (
+              <a
+                className="inline-block opacity-80 hover:opacity-100 transition ease-out duration-150"
+                href={footer.social.email}
+                target="_blank"
+              >
+                <FaEnvelope
+                  className={`${socialIconClasses} ${
+                    socialIconColorClasses[
+                      footer.color === "primary" ? "primary" : theme.color
+                      ]
+                  }`}
+                />
+              </a>
+            )}
             {footer.social && footer.social.facebook && (
               <a
                 className="inline-block opacity-80 hover:opacity-100 transition ease-out duration-150"
@@ -124,6 +139,21 @@ export default function Footer() {
                     socialIconColorClasses[
                       footer.color === "primary" ? "primary" : theme.color
                     ]
+                  }`}
+                />
+              </a>
+            )}
+            {footer.social && footer.social.linkedin && (
+              <a
+                className="inline-block opacity-80 hover:opacity-100 transition ease-out duration-150"
+                href={footer.social.linkedin}
+                target="_blank"
+              >
+                <FaLinkedin
+                  className={`${socialIconClasses} ${
+                    socialIconColorClasses[
+                      footer.color === "primary" ? "primary" : theme.color
+                      ]
                   }`}
                 />
               </a>

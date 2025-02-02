@@ -30,7 +30,7 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
       >
         <div className="container text-center md:text-left">
           <div className="grid grid-cols-12">
-            <div className="md:col-span-6">
+            <div className="col-span-12 sm:col-span-6">
               {data.title && (
                 <h2
                   data-tina-field={tinaField(data, "title")}
@@ -85,8 +85,8 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
                 </div>
               )}
             </div>
-            <div className="col-span-12 md:col-span-6">
-              <div className="md:relative -mt-16">
+            <div className="col-span-12 sm:col-span-6">
+              <div className="md:relative -mt-20 md:-mt-40">
                 {data.image && (
                   <div
                     data-tina-field={tinaField(data.image, "src")}
