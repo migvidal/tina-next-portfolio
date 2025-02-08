@@ -6,6 +6,7 @@ import { Features } from "./features";
 import { Testimonial } from "./testimonial";
 import { TranslationServices } from "./translation-services";
 import { Gallery } from "./gallery";
+import { ContactForm } from "./contact-form";
 
 export const Blocks = (props: Omit<Page, "id" | "_sys" | "_values">) => {
   return (
@@ -37,6 +38,8 @@ const Block = (block: PageBlocks) => {
       return <TranslationServices data={block} />;
     case "PageBlocksGallery":
       return <Gallery data={block} />;
+    case "PageBlocksContact_form":
+      return <ContactForm data={block} />;
     default:
       return null;
   }
