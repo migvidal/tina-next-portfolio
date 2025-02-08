@@ -5,7 +5,9 @@ import { testimonialBlockSchema } from "../../components/blocks/testimonial";
 import { featureBlockSchema } from "../../components/blocks/features";
 import { translationServiceBlockSchema } from "../../components/blocks/translation-services";
 import { galleryBlockSchema } from "../../components/blocks/gallery";
+import { contactFormSchema } from "../../components/blocks/contact-form";
 
+// @ts-ignore
 // @ts-ignore
 const Page: Collection = {
   label: "Pages",
@@ -52,6 +54,8 @@ const Page: Collection = {
         //@ts-ignore
         translationServiceBlockSchema,
         galleryBlockSchema,
+        //@ts-ignore
+        contactFormSchema,
       ],
     },
   ],
