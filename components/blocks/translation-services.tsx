@@ -104,7 +104,7 @@ export const TranslationServices = ({ data }: { data: PageBlocksTranslation_Serv
         {data.title && (
           <h3
             data-tina-field={tinaField(data, "title")}
-            className="text-2xl font-semibold title-font"
+            className="h2"
           >
             {data.title}
           </h3>

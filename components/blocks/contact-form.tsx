@@ -8,32 +8,33 @@ import { PageBlocksContact_Form } from "../../tina/__generated__/types";
 
 
 export const ContactForm = ({ data }: { data: PageBlocksContact_Form }) => {
-  const textFieldClass = "shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline";
+  const textFieldClass = "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline";
   return (
     <Section color={data.color}>
       <Container
         size="small"
+        width="small"
       >
         {
           data.title && (
-            <h1 data-tina-field={tinaField(data, "title")} className="text-3xl font-bold text-center">{data.title}</h1>
+            <h2 data-tina-field={tinaField(data, "title")} className="h2">{data.title}</h2>
           )
         }
         {
           data.subtitle && (
-            <p data-tina-field={tinaField(data, "subtitle")} className="text-lg font-bold text-center">{data.subtitle}</p>
+            <p data-tina-field={tinaField(data, "subtitle")} className="text-lg font-bold text-center mb-4">{data.subtitle}</p>
           )
         }
         {
           data.body && (
-            <p data-tina-field={tinaField(data, "body")} className="text-lg text-center">
+            <p data-tina-field={tinaField(data, "body")} className="text-lg text-center mb-8">
               <TinaMarkdown
                 content={data.body}
               />
             </p>
           )
         }
-        <form action="https://formspree.io/f/xbldkzkv" method="POST">
+        <form action="https://formspree.io/f/xbldkzkv" method="POST" className="max-w-sm mx-auto">
           {
             data.name_field && (
               <div className="mb-6">
@@ -61,7 +62,7 @@ export const ContactForm = ({ data }: { data: PageBlocksContact_Form }) => {
                 data-tina-field={tinaField(data.email_field, "placeholder")}
                 id="email"
                 name="email"
-                className="form-input"
+                className={textFieldClass}
                 placeholder={data.email_field.placeholder}
                 type="email" />
             </div>
@@ -77,7 +78,7 @@ export const ContactForm = ({ data }: { data: PageBlocksContact_Form }) => {
                   data-tina-field={tinaField(data.body_field, "placeholder")}
                   id="message"
                   name="message"
-                  className="form-input"
+                  className={textFieldClass}
                   placeholder={data.body_field.placeholder}
                   rows={8}></textarea>
               </div>
@@ -86,7 +87,7 @@ export const ContactForm = ({ data }: { data: PageBlocksContact_Form }) => {
           {
             data.button && (
               <button data-tina-field={tinaField(data, "button")} type="submit"
-                      className="btn btn-primary rounded-full">{data.button}</button>
+                      className="btn btn-primary rounded-full px-6 py-4 bg-black text-white">{data.button}</button>
             )
           }
         </form>
@@ -170,7 +171,7 @@ export const contactFormSchema = {
       ],
     },
     {
-      label: "Body",
+      label: "Body field",
       name: "body_field",
       type: "object",
       ui: {

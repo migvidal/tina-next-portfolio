@@ -1,5 +1,5 @@
 ---
-title: Tina Cloud Starter
+title: Home
 blocks:
   - title: I'm Alba Vidal
     subtitle: Audiovisual translator.
@@ -81,5 +81,25 @@ blocks:
               know. This is why LQA requires solid linguistic knowledge, as well
               as the skill of knowing where to look and what to look for.
     _template: translation_services
+  - title: Contact
+    subtitle: >-
+      Do you need translation, proofreading, subtitling or media accessibility
+      services?
+    body: >
+      Tell me about your project and let’s get to work. You’re not quite sure
+      what you need? Drop me a line anyway! I will help you figure out what the
+      best option for you is and give you a no obligation quote.
+    name_field:
+      label: Your name
+      placeholder: John Appleseed
+    email_field:
+      label: Your email
+      placeholder: johnappleseed@xyz.com
+    body_field:
+      label: Message
+      placeholder: I would like to translate...
+    button: Send
+    color: tint
+    _template: contact_form
 ---
 

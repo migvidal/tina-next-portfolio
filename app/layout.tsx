@@ -39,21 +39,22 @@ export default async function RootLayout({
 
   const selectFont = (fontName: string) => {
     switch (fontName) {
-      case "nunito":
-        return `font-nunito ${nunito.variable}`;
       case "lato":
         return `font-lato ${lato.variable}`;
       case "sans":
-      default:
         return `font-sans ${fontSans.variable} `;
+      case "nunito":
+      default:
+        return `font-nunito ${nunito.variable}`;
     }
   };
   const fontVariable = selectFont(global.theme.font);
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={nunito.className}>
+    {/*className={cn("min-h-screen flex flex-col antialiased", fontVariable)}*/}
       <body
-        className={cn("min-h-screen flex flex-col antialiased", fontVariable)}
+        className="min-h-screen flex flex-col antialiased"
       >
         <ThemeProvider
           attribute="class"

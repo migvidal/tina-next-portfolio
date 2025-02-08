@@ -32,13 +32,13 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
           <div className="grid grid-cols-12">
             <div className="col-span-12 sm:col-span-6">
               {data.title && (
-                <h2
+                <h1
                   data-tina-field={tinaField(data, "title")}
-                  className="w-full relative text-5xl font-extrabold tracking-normal leading-tight title-font"
+                  className="w-full relative text-5xl font-extrabold tracking-normal leading-tight title-font inflatableFont"
                 >
                   {data.title}
                   <span className="absolute w-full h-full left-0 top-0 rounded-full -z-1 bg-current opacity-7"></span>
-                </h2>
+                </h1>
               )}
               {data.subtitle && (
                 <h3
