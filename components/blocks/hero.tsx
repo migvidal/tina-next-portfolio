@@ -26,7 +26,8 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
   return (
     <Section color={data.color}>
       <Container
-        size="large"
+        size="small"
+        width="small"
       >
         <div className="container text-center md:text-left">
           <div className="grid grid-cols-12">
@@ -43,7 +44,7 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
               {data.subtitle && (
                 <h3
                   data-tina-field={tinaField(data, "subtitle")}
-                  className={"relative inline-block px-3 py-1 text-md font-bold tracking-wide title-font z-20"}
+                  className={"relative inline-block text-lg font-extrabold tracking-wide title-font z-20"}
                 >
               <span
                 className={`bg-clip-text text-transparent bg-gradient-to-r  ${

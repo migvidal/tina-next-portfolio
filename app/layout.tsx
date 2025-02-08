@@ -1,25 +1,13 @@
 import "../styles.css";
 import React from "react";
 import { ThemeProvider } from "../components/theme-provider";
-import { Inter as FontSans, Lato, Nunito } from "next/font/google";
-import { cn } from "../lib/utils";
+import { Nunito } from "next/font/google";
 import { Metadata } from "next";
 import client from "../tina/__generated__/client";
-
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
 
 const nunito = Nunito({
   subsets: ["latin"],
   variable: "--font-nunito",
-});
-
-const lato = Lato({
-  subsets: ["latin"],
-  variable: "--font-lato",
-  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -37,22 +25,8 @@ export default async function RootLayout({
   });
   const global = globalQuery.data.global;
 
-  const selectFont = (fontName: string) => {
-    switch (fontName) {
-      case "lato":
-        return `font-lato ${lato.variable}`;
-      case "sans":
-        return `font-sans ${fontSans.variable} `;
-      case "nunito":
-      default:
-        return `font-nunito ${nunito.variable}`;
-    }
-  };
-  const fontVariable = selectFont(global.theme.font);
-
   return (
     <html lang="en" suppressHydrationWarning className={nunito.className}>
-    {/*className={cn("min-h-screen flex flex-col antialiased", fontVariable)}*/}
       <body
         className="min-h-screen flex flex-col antialiased"
       >

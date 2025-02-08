@@ -69,7 +69,7 @@ const TranslationService = ({ service }: { service: PageBlocksTranslation_Servic
       {service.title &&
         <h4
           data-tina-field={tinaField(service, "title")}
-          className="font-bold text-xl"
+          className="h3"
         >
           {service.title}
         </h4>}
