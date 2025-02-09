@@ -14,7 +14,7 @@ blocks:
       alt: Macaw caw
     image_on_hover:
       src: /uploads/working_with_fire.png
-    color: tint
+    color: default
     _template: hero
   - title: Services I offer
     introduction: >
@@ -80,6 +80,7 @@ blocks:
               speak, having to perform checks on tens of languages we don’t
               know. This is why LQA requires solid linguistic knowledge, as well
               as the skill of knowing where to look and what to look for.
+    color: tint
     _template: translation_services
   - title: Contact
     subtitle: >-
@@ -99,7 +100,7 @@ blocks:
       label: Message
       placeholder: I would like to translate...
     button: Send
-    color: tint
+    color: default
     _template: contact_form
 ---
 

@@ -96,7 +96,7 @@ const TranslationService = ({ service }: { service: PageBlocksTranslation_Servic
 
 export const TranslationServices = ({ data }: { data: PageBlocksTranslation_Services }) => {
   return (
-    <Section className="p-8">
+    <Section color={data.color} className="p-8">
       <div
         data-tina-field={tinaField(data)}
         className="flex-1 flex flex-col gap-6 items-center lg:text-left mx-auto"
@@ -231,6 +231,16 @@ export const translationServiceBlockSchema = {
             },
           ],
         },
+      ],
+    },
+    {
+      type: "string",
+      label: "Color",
+      name: "color",
+      options: [
+        { label: "Default", value: "default" },
+        { label: "Tint", value: "tint" },
+        { label: "Primary", value: "primary" },
       ],
     },
   ],
