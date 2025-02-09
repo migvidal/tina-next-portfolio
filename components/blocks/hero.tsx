@@ -8,7 +8,6 @@ import Image from "next/image";
 import { Section } from "../layout/section";
 import { Container } from "../layout/container";
 import { Actions } from "./actions";
-import MermaidElement from "../mermaid-renderer";
 import { imageSchema } from "./image-schema";
 import { toolbarOverrides } from "./toolbar-overrides";
 
@@ -29,6 +28,7 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
       <Container
         size="small"
         width="small"
+        className="pt-16"
       >
         <div className="container text-center md:text-left">
           <div className="grid grid-cols-12">
@@ -67,14 +67,7 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
                       : `dark:prose-dark`
                   }`}
                 >
-                  <TinaMarkdown
-                    content={data.body}
-                    components={{
-                      mermaid({ value }) {
-                        return <MermaidElement value={value} />;
-                      },
-                    }}
-                  />
+                  <TinaMarkdown content={data.body} />
                 </div>
               )}
               {data.actions && (
@@ -88,11 +81,11 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
               )}
             </div>
             <div className="col-span-12 sm:col-span-6">
-              <div className="md:relative -mt-20 md:-mt-40">
+              <div className="md:relative md:-mt-24">
                 {data.image && (
                   <div
                     data-tina-field={tinaField(data.image, "src")}
-                    className="w-full h-auto rounded-lg mx-auto hidden md:block absolute md:opacity-100 md:hover:opacity-0 transition-opacity duration-1000"
+                    className="w-full h-auto rounded-lg mx-auto hidden md:block absolute md:opacity-100 md:hover:opacity-0 transition-opacity duration-1000 max-w-80"
                   >
                     <Image
                       style={{ objectFit: "cover" }}
@@ -106,7 +99,7 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
                 {data.image_on_hover && (
                   <div
                     data-tina-field={tinaField(data.image, "src")}
-                    className="mx-auto block md:absolute md:opacity-0 md:hover:opacity-100 transition-opacity duration-1000"
+                    className="mx-auto block md:absolute md:opacity-0 md:hover:opacity-100 transition-opacity duration-1000 max-w-80"
                   >
                     <Image
                       style={{ objectFit: "cover" }}

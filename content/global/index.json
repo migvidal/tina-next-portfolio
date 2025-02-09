@@ -29,12 +29,13 @@
   "footer": {
     "color": "default",
     "social": {
+      "email": "mailto:albavidalf@gmail.com",
       "twitter": "https://x.com/albavidalf",
       "linkedin": "https://www.linkedin.com/in/albavidalf/"
     }
   },
   "theme": {
-    "color": "blue",
+    "color": "white",
     "font": "nunito",
     "darkMode": "dark"
   }
