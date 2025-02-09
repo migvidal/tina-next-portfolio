@@ -5,6 +5,7 @@ import { Container } from "../layout/container";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import * as React from "react";
 import { PageBlocksContact_Form } from "../../tina/__generated__/types";
+import { toolbarOverrides } from "./toolbar-overrides";
 
 
 export const ContactForm = ({ data }: { data: PageBlocksContact_Form }) => {
@@ -129,6 +130,7 @@ export const contactFormSchema = {
       label: "Body text",
       name: "body",
       type: "rich-text",
+      toolbarOverride: toolbarOverrides,
     },
     {
       label: "Name field",

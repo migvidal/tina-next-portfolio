@@ -10,6 +10,7 @@ import { Container } from "../layout/container";
 import { Actions } from "./actions";
 import MermaidElement from "../mermaid-renderer";
 import { imageSchema } from "./image-schema";
+import { toolbarOverrides } from "./toolbar-overrides";
 
 export const Hero = ({ data }: { data: PageBlocksHero }) => {
   const headlineColorClasses = {
@@ -153,6 +154,7 @@ export const heroBlockSchema: Template = {
       label: "Body text",
       name: "body",
       type: "rich-text",
+      toolbarOverride: toolbarOverrides,
     },
     {
       name: "actions",

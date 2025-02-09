@@ -1,7 +1,7 @@
 import { tinaField } from "tinacms/dist/react";
 import { Page, PageBlocks } from "../../tina/__generated__/types";
 import { Hero } from "./hero";
-import { Content } from "./content";
+import { About } from "./about";
 import { Features } from "./features";
 import { Testimonial } from "./testimonial";
 import { TranslationServices } from "./translation-services";
@@ -28,8 +28,8 @@ const Block = (block: PageBlocks) => {
   switch (block.__typename) {
     case "PageBlocksHero":
       return <Hero data={block} />;
-    case "PageBlocksContent":
-      return <Content data={block} />;
+    case "PageBlocksAbout":
+      return <About data={block} />;
     case "PageBlocksFeatures":
       return <Features data={block} />;
     case "PageBlocksTestimonial":

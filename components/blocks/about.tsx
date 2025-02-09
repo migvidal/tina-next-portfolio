@@ -3,17 +3,17 @@ import React from "react";
 
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import type { Template } from "tinacms";
-import { PageBlocksContent } from "../../tina/__generated__/types";
 import { tinaField } from "tinacms/dist/react";
 import { Container } from "../layout/container";
 import { Section } from "../layout/section";
-import MermaidElement from "../mermaid-renderer";
 import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink, faFile } from "@fortawesome/free-solid-svg-icons";
+import { toolbarOverrides } from "./toolbar-overrides";
+import { PageBlocksAbout } from "../../tina/__generated__/types";
 
-export const Content = ({ data }: { data: PageBlocksContent }) => {
+export const About = ({ data }: { data: PageBlocksAbout }) => {
   let imageSize: number = 200;
   switch (data.pfp?.size) {
     case "md":
@@ -48,11 +48,11 @@ export const Content = ({ data }: { data: PageBlocksContent }) => {
         className={`prose prose-lg ${
           data.color === "primary" ? `prose-primary` : `dark:prose-dark`
         }`}
-        data-tina-field={tinaField(data, "body")}
         size="large"
         width="medium"
       >
-        {data.title && <h1 className="text-5xl text-center">{data.title}</h1>}
+        {data.title &&
+          <h1 data-tina-field={tinaField(data, "title")} className="text-5xl text-center">{data.title}</h1>}
         <div className="flex flex-wrap items-center justify-center">
           <Image
             data-tina-field={tinaField(data, "pfp")}
@@ -68,7 +68,7 @@ export const Content = ({ data }: { data: PageBlocksContent }) => {
           />
           <div className="mx-8">
             {data.resumelink && (
-              <div>
+              <div data-tina-field={tinaField(data, "resumelink")}>
                 <div
                   className="inline-flex items-center justify-center text-center bg-black rounded text-white h-8 w-8 m-2">
                   <FontAwesomeIcon icon={faFile} />
@@ -79,7 +79,7 @@ export const Content = ({ data }: { data: PageBlocksContent }) => {
             {
               data.links && (
                 data.links.map((link, index) => (
-                  <div key={index}>
+                  <div key={index} data-tina-field={tinaField(data.links[index], "url")}>
                     <div
                       className="inline-flex items-center justify-center text-center bg-black rounded text-white h-8 w-8 m-2">
                       <FontAwesomeIcon icon={faLink} />
@@ -91,23 +91,19 @@ export const Content = ({ data }: { data: PageBlocksContent }) => {
             }
           </div>
         </div>
-        <TinaMarkdown
-          content={data.body ?? ""}
-          components={{
-            mermaid({ value }) {
-              return <MermaidElement value={value} />;
-            },
-          }}
-        />
+        <div data-tina-field={tinaField(data, "body")}>
+          <TinaMarkdown
+            content={data.body ?? ""}
+          />
+        </div>
       </Container>
     </Section>
-  )
-    ;
+  );
 };
 
 export const contentBlockSchema: Template = {
-  name: "content",
-  label: "Content",
+  name: "about",
+  label: "About",
   ui: {
     previewSrc: "/blocks/content.png",
     defaultItem: {
@@ -193,6 +189,7 @@ export const contentBlockSchema: Template = {
       label: "Body",
       name: "body",
       type: "rich-text",
+      toolbarOverride: toolbarOverrides,
     },
     {
       label: "Color",

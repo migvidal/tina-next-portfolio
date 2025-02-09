@@ -73,6 +73,6 @@ blocks:
       understands not only the source and target cultures, but also what your
       goals are, and who helps you get there through translation.
     color: tint
-    _template: content
+    _template: about
 ---
 
