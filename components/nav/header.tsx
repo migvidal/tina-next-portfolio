@@ -8,6 +8,7 @@ import { tinaField } from "tinacms/dist/react";
 import { Icon } from "../icon";
 import NavItems from "./nav-items";
 import { useLayout } from "../layout/layout-context";
+import { CookiesProvider, useCookies } from "react-cookie";
 
 const headerColor = {
   default:
@@ -20,8 +21,8 @@ const headerColor = {
     pink: "text-white from-pink-400 to-pink-500",
     purple: "text-white from-purple-400 to-purple-500",
     orange: "text-white from-orange-400 to-orange-500",
-    yellow: "text-white from-yellow-400 to-yellow-500",
-  },
+    yellow: "text-white from-yellow-400 to-yellow-500"
+  }
 };
 
 export default function Header() {
@@ -50,7 +51,7 @@ export default function Header() {
                 data={{
                   name: header.icon.name,
                   color: header.icon.color,
-                  style: header.icon.style,
+                  style: header.icon.style
                 }}
               />{" "}
               <span data-tina-field={tinaField(header, "name")}>
@@ -58,7 +59,9 @@ export default function Header() {
               </span>
             </Link>
           </h4>
+
           <NavItems navs={header.nav} />
+          <LanguageSwitcher />
         </div>
         <div
           className={cn(
@@ -71,5 +74,21 @@ export default function Header() {
         />
       </Container>
     </div>
+  );
+}
+
+function LanguageSwitcher() {
+  const [cookies, setCookie] = useCookies(["NEXT_LOCALE"]);
+
+  function setLocale(locale: string) {
+    setCookie("NEXT_LOCALE", locale);
+    location.reload();
+  }
+
+  return (
+    <CookiesProvider>
+      {cookies.NEXT_LOCALE === "es" ? <button onClick={() => setLocale("en")}>EN</button> :
+        <button onClick={() => setLocale("es")}>ES</button>}
+    </CookiesProvider>
   );
 }

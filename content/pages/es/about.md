@@ -1,17 +1,17 @@
 ---
-title: About
+title: Acerca de
 blocks:
-  - title: About Me
+  - title: Sobre mí
     pfp:
       src: /uploads/profile_picture.jpeg
       shape: rounded
     resumelink:
-      label: My CV
+      label: Mi CV
       url: 'http://localhost:3000/uploads/resumes/CV-alba-english.pdf'
     links:
-      - name: Things I have translated
+      - name: Cosas que he traducido
         url: 'https://basededatos.atrae.org/user/alba-vidal/'
-      - name: ATRAE Awards 2018
+      - name: Premios ATRAE 2018
         url: 'https://premios.atrae.org/ganadores-ix-edicion/'
     body: >
       **Hi there! My name is Alba Vidal, audiovisual translator.** “Audiovisual”
@@ -75,4 +75,5 @@ blocks:
     color: tint
     _template: about
 ---
+
 
