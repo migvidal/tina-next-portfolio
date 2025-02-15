@@ -64,6 +64,11 @@ const Global: Collection = {
             },
           ],
         },
+        {
+          type: "boolean",
+          label: "Frosted glass look",
+          name: "glass",
+        }
       ],
     },
     {

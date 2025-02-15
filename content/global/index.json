@@ -22,7 +22,8 @@
         "label": "Portfolio",
         "labeles": "Porfolio"
       }
-    ]
+    ],
+    "glass": true
   },
   "footer": {
     "color": "default",
@@ -33,7 +34,7 @@
     }
   },
   "theme": {
-    "color": "white",
+    "color": "blue",
     "font": "nunito",
     "darkMode": "light"
   }
