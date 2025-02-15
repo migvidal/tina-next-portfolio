@@ -39,8 +39,8 @@ export default function Header() {
       className={`relative overflow-hidden bg-gradient-to-b ${headerColorCss}`}
     >
       <Container size="custom" className="py-0 relative z-10 max-w-8xl">
-        <div className="flex items-center justify-between gap-6">
-          <h4 className="select-none text-lg font-bold tracking-tight my-4 transition duration-150 ease-out transform">
+        <div className="flex flex-wrap sm:flex-nowrap flex-col sm:flex-row items-center sm:justify-between sm:gap-6">
+          <h4 className="select-none text-lg font-bold tracking-tight my-4 sm:mr-20 transition duration-150 ease-out transform">
             <Link
               href="/"
               className="flex gap-1 items-center whitespace-nowrap tracking-[.002em]"
@@ -59,9 +59,10 @@ export default function Header() {
               </span>
             </Link>
           </h4>
-
-          <NavItems navs={header.nav} />
-          <LanguageSwitcher />
+          <div className="flex flex-row items-center justify-between w-full">
+            <NavItems navs={header.nav} />
+            <LanguageSwitcher className="py-4 ml-10" />
+          </div>
         </div>
         <div
           className={cn(
@@ -77,7 +78,7 @@ export default function Header() {
   );
 }
 
-function LanguageSwitcher() {
+function LanguageSwitcher({ className = "" }: { className: string }) {
   const [cookies, setCookie] = useCookies(["NEXT_LOCALE"]);
 
   function setLocale(locale: string) {
@@ -87,8 +88,8 @@ function LanguageSwitcher() {
 
   return (
     <CookiesProvider>
-      {cookies.NEXT_LOCALE === "es" ? <button onClick={() => setLocale("en")}>EN</button> :
-        <button onClick={() => setLocale("es")}>ES</button>}
+      {cookies.NEXT_LOCALE === "es" ? <button className={className} onClick={() => setLocale("en")}>EN</button> :
+        <button className={className} onClick={() => setLocale("es")}>ES</button>}
     </CookiesProvider>
   );
 }
