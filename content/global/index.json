@@ -1,28 +1,26 @@
 {
   "header": {
     "icon": {
-      "name": "Tina",
       "color": "orange",
       "style": "float"
     },
-    "name": "Tina Starter",
+    "name": "Alba Vidal",
     "color": "default",
     "nav": [
       {
         "href": "/#contact",
-        "label": "Contact"
-      },
-      {
-        "href": "portfolio",
-        "label": "Portfolio"
-      },
-      {
-        "href": "",
-        "label": "Home"
+        "label": "Contact",
+        "labeles": "Contacto"
       },
       {
         "href": "about",
-        "label": "About"
+        "label": "About",
+        "labeles": "Acerca de"
+      },
+      {
+        "href": "portfolio",
+        "label": "Portfolio",
+        "labeles": "Porfolio"
       }
     ]
   },
@@ -37,6 +35,6 @@
   "theme": {
     "color": "white",
     "font": "nunito",
-    "darkMode": "dark"
+    "darkMode": "light"
   }
 }

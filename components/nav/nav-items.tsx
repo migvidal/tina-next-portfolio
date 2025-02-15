@@ -5,6 +5,7 @@ import NavActive from "./nav-active";
 import { tinaField } from "tinacms/dist/react";
 import Link from "next/link";
 import { useLayout } from "../layout/layout-context";
+import { useCookies } from "react-cookie";
 
 const activeItemClasses = {
   blue: "border-b-3 border-blue-200 text-blue-700 dark:text-blue-300 font-medium dark:border-blue-700",
@@ -33,6 +34,7 @@ const activeBackgroundClasses = {
 };
 
 export default function NavItems({ navs }: { navs: any }) {
+  const [cookies] = useCookies(["NEXT_LOCALE"]);
   const currentPath = usePathname();
   const { theme } = useLayout();
   return (
@@ -52,7 +54,7 @@ export default function NavItems({ navs }: { navs: any }) {
               href={`/${item.href}`}
               className={`relative select-none	text-base inline-block tracking-wide transition duration-150 ease-out hover:opacity-100 py-8 px-4`}
             >
-              {item.label}
+              {cookies.NEXT_LOCALE === 'es' ? item.labeles : item.label}
               {currentPath === `/${item.href}` && (
                 <NavActive
                   backgroundColor={activeBackgroundClasses[theme.color]}
