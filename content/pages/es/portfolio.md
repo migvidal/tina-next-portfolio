@@ -44,6 +44,33 @@ blocks:
       - src: /uploads/shows/Ibiza.jpg
         alt: Ibiza
         size: regular
+      - src: /uploads/shows/Intrusion.jpg
+        alt: Intrusion
+        size: regular
+      - src: /uploads/shows/Jazzman's_Blues.jpg
+        alt: Jazzman's Blues
+        size: regular
+      - src: /uploads/shows/Kengan_Ashura.jpg
+        alt: Kengan Ashura
+        size: regular
+      - src: /uploads/shows/Love_for_Sale_2.jpg
+        alt: Love for Sale 2
+        size: regular
+      - src: /uploads/shows/Mechanic_Resurrection.jpg
+        alt: Mechanic Resurrection
+        size: regular
+      - src: /uploads/shows/Money_Korea.jpg
+        alt: 'Money Heist: Korea'
+        size: regular
+      - src: /uploads/shows/Nightmare_of_Wolf.jpg
+        alt: 'Witcher: Nightmare of the Wolf'
+        size: regular
+      - src: /uploads/shows/Oprah_Viola_poster.jpg
+        alt: Oprah + Viola
+        size: regular
+      - src: /uploads/shows/Outer_Banks.jpg
+        alt: Outer Banks
+        size: regular
     _template: gallery
 ---
 
