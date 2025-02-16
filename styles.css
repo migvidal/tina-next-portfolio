@@ -23,9 +23,7 @@
 }
 
 .inflatable-font {
-    font-family: "nunito", sans-serif;
     font-variation-settings: "wght" 500;
-
     animation-delay: 1s;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
