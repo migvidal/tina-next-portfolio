@@ -9,6 +9,9 @@ blocks:
       I have also translated several websites and conducted proofreading and
       linguistic QC for various clients.
     pictures:
+      - src: /uploads/shows/Boo_Bitch.jpg
+        alt: 'Boo, Bitch'
+        size: regular
       - src: /uploads/shows/Anne.jpg
         alt: Anne+
       - src: /uploads/shows/AlienXMas.jpg
@@ -16,7 +19,4 @@ blocks:
         size: regular
     _template: gallery
 ---
-
-
-
 
