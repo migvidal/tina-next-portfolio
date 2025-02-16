@@ -71,6 +71,9 @@ blocks:
       - src: /uploads/shows/Outer_Banks.jpg
         alt: Outer Banks
         size: regular
+      - src: /uploads/shows/Pamela_poster.jpg
+        alt: Pamela
+        size: regular
     _template: gallery
 ---
 
