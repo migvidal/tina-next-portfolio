@@ -36,7 +36,7 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
               {data.title && (
                 <h1
                   data-tina-field={tinaField(data, "title")}
-                  className="w-full relative text-5xl font-extrabold tracking-normal leading-tight title-font inflatableFont"
+                  className="w-full relative text-5xl font-extrabold tracking-normal leading-tight title-font inflatable-font"
                 >
                   {data.title}
                   <span className="absolute w-full h-full left-0 top-0 rounded-full -z-1 bg-current opacity-7"></span>
