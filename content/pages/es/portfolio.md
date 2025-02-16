@@ -74,6 +74,32 @@ blocks:
       - src: /uploads/shows/Pamela_poster.jpg
         alt: Pamela
         size: regular
+      - src: /uploads/shows/Queer_Eye.jpg
+        alt: Queer Eye
+      - src: /uploads/shows/Rebel_Cheer_Squad.jpg
+        alt: Rebel Cheer Squad
+      - src: /uploads/shows/RuPaul_All_Stars.jpg
+        alt: RuPaul All Stars
+      - src: /uploads/shows/RuPaul_Untucked.jpg
+        alt: RuPaul Untucked
+      - src: /uploads/shows/RuPaul_poster.jpg
+        alt: RuPaul's Drag Race
+      - src: /uploads/shows/Secret_Celebrity_RuPaul.jpg
+        alt: Secret Celebrity RuPaul
+      - src: /uploads/shows/Selena.jpg
+        alt: Selena
+      - src: /uploads/shows/Soupcons.jpg
+        alt: Under Suspicion
+      - src: /uploads/shows/Spinning_Out.jpg
+        alt: Spinning Out
+      - src: /uploads/shows/Standup_for_Drummers.jpg
+        alt: Standup for Drummers.jpg
+      - src: /uploads/shows/Strays_poster.jpg
+        alt: The Strays
+      - src: /uploads/shows/Survival_poster.jpg
+        alt: Survival of the Thickest
+      - src: /uploads/shows/The_Mind_Explained.jpg
+        alt: The Mind Explained
     _template: gallery
 ---
 
