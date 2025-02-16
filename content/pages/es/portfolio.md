@@ -41,6 +41,9 @@ blocks:
       - src: /uploads/shows/I_Used_to_Be_Famous.jpg
         alt: I Used to Be Famous
         size: regular
+      - src: /uploads/shows/Ibiza.jpg
+        alt: Ibiza
+        size: regular
     _template: gallery
 ---
 
