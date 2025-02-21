@@ -102,6 +102,18 @@ blocks:
         alt: The Mind Explained
       - src: /uploads/shows/The_Rain.jpg
         alt: The Rain
+      - src: /uploads/shows/Then_Barbara.jpg
+        alt: Then Barbara Met Alan
+      - src: /uploads/shows/Top_Boy.jpg
+        alt: Top Boy
+      - src: /uploads/shows/Trivia_Quest_poster.jpg
+        alt: Trivia Quest
+      - src: /uploads/shows/Unseen_poster.jpg
+        alt: Unseen
+      - src: /uploads/shows/Witcher_poster.jpg
+        alt: Witcher
+      - src: /uploads/shows/You_Dont_Know_Me.jpg
+        alt: You Dont Know Me
     _template: gallery
 ---
 
