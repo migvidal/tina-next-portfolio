@@ -100,6 +100,8 @@ blocks:
         alt: Survival of the Thickest
       - src: /uploads/shows/The_Mind_Explained.jpg
         alt: The Mind Explained
+      - src: /uploads/shows/The_Rain.jpg
+        alt: The Rain
     _template: gallery
 ---
 
