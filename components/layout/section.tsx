@@ -1,7 +1,7 @@
 import React from "react";
 import { useLayout } from "../layout/layout-context";
 
-export const Section = ({ children, color = "", className = "" }) => {
+export const Section = ({ children, color = "", className = "", id = "" }) => {
   const { theme } = useLayout();
   const sectionColor = {
     default:
@@ -19,18 +19,19 @@ export const Section = ({ children, color = "", className = "" }) => {
       orange:
         "text-white bg-orange-500 bg-gradient-to-br from-orange-500 to-orange-600",
       yellow:
-        "text-white bg-yellow-500 bg-gradient-to-br from-yellow-500 to-yellow-600",
-    },
+        "text-white bg-yellow-500 bg-gradient-to-br from-yellow-500 to-yellow-600"
+    }
   };
   const sectionColorCss =
     color === "primary"
       ? sectionColor.primary[theme.color]
       : sectionColor[color]
-      ? sectionColor[color]
-      : sectionColor.default;
+        ? sectionColor[color]
+        : sectionColor.default;
 
   return (
     <section
+      id={id}
       className={`flex-1 relative transition duration-150 ease-out body-font overflow-hidden ${sectionColorCss} ${className}`}
     >
       {children}

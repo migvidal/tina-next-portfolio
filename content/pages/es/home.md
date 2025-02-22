@@ -8,12 +8,13 @@ blocks:
       - label: Contact me!
         type: button
         icon: true
-        link: /
+        link: '#contact'
     image:
       src: /uploads/working_without_fire.png
-      alt: Macaw caw
+      alt: Working with fire
     image_on_hover:
       src: /uploads/working_with_fire.png
+      alt: Working
     color: default
     _template: hero
   - title: Services I offer
