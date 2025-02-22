@@ -57,7 +57,7 @@ export default function Header() {
           </h4>
           <div className="flex flex-row items-center justify-between w-full">
             <NavItems navs={header.nav} />
-            <LanguageSwitcher className="py-4 ml-10" />
+            <LanguageSwitcher className="text-xs px-2 py-1 ml-10 outline outline-1 rounded hover:opacity-45" />
           </div>
         </div>
         <div
