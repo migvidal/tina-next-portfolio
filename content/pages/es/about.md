@@ -14,65 +14,65 @@ blocks:
       - name: Premios ATRAE 2018
         url: 'https://premios.atrae.org/ganadores-ix-edicion/'
     body: >
-      **Hi there! My name is Alba Vidal, audiovisual translator.** “Audiovisual”
-      and “Vidal” rhyme in Spanish, but sadly not in English. I will eventually
-      come up with something nice to make up for it, I promise!
+      ¡Hola! Soy Alba Vidal, traductora audiovisual. Sí, rima. ¿Casualidad?
+      Quién sabe.
 
 
-      **I have over 7 years of experience as a professional translator and
-      proofreader. Of those 7, 5 years have been dedicated almost exclusively to
-      what I enjoy more than anything in the world: audiovisual translation.**
+      Llevo más de 7 años dedicándome a la traducción y a la corrección de
+      textos. De esos 7 años, 5 han estado dedicados casi exclusivamente a lo
+      que más me gusta, chifla y apasiona: la traducción audiovisual.
 
 
-      I remember being a pre-teen self translating Hilary Duff lyrics for fun.
-      And I’m talking pre-internet times, so I used a physical dictionary! With
-      pages! I also remember when **I was 18** and had to choose what to study
-      after high school, and how I would end up crying because **I couldn’t
-      decide between English, Media Studies or Translation**. Well, it turns out
-      you can combine all three, and that is what I’ve done.
+      Recuerdo a mi yo preadolescente traduciendo letras de Hilary Duff por
+      diversión (y con el diccionario, sin internet). Y también a mi yo de 18
+      teniendo que elegir entre estudiar algo relacionado con el cine o con el
+      inglés, y echarme a llorar por no saber. ¡Resulta que podía combinar las
+      dos cosas! Y eso es lo que he hecho.
 
 
-      After completing my BA in English Studies in Universidad de Oviedo
-      (Spain), I moved to London, where I lived for several years. Among the
-      many things I did there, I studied an **MA in Audiovisual Translation at
-      the University of Roehampton**.
+      Después de graduarme en Estudios Ingleses por la Universidad de Oviedo, me
+      mudé a Londres, donde viví varios años y donde, entre otras cosas, cursé
+      un Máster de Traducción Audiovisual en la University of Roehampton.
 
 
-      Fast forward to 2023, and **I have translated over 40 films and TV shows
-      into Spanish**. In 2018,\*\* I won an ATRAE award for Best Subtitled TV
-      Show\*\* for my translation of RuPaul’s Drag Race.
+      Ahora he traducido más de 40 películas y series y, en 2018, gané el Premio
+      ATRAE a Mejor Serie Subtitulada.
 
 
-      Besides **freelance** translation, I have also worked as an in-house
-      Linguistic QA specialist for companies such as **Electronic Arts and
-      Deluxe Media**. I also collaborate with film festivals as a subtitle
-      technician.
+      Además de traductora freelance, he trabajado en plantilla como
+      especialista de QA lingüístico para empresas como EA y Deluxe. También he
+      colaborado en festivales de cine como técnico de subtitulado.
 
 
-      ## Why work with me?
+      # ¿Por qué elegirme a mí?
 
 
-      > But Alba, isn’t ChatGPT just as good as a human translator these days?
-      Isn’t the proofreading function in Word enough? Why should I hire a
-      professional?
+      > Pero Alba, el ChatGPT o mi primo que vive en Londres y sabe inglés me
+      pueden hacer la traducción gratis. ¿Para qué quiero a una profesional?
 
 
-      Translation:
+      Traducción:
 
 
-      > But Alba, doesn’t McDonald’s sell cheaper food? Why would I go to a
-      Michelin star restaurant, then?
+      > Pero Alba, si en el McDonalds también se come, ¿para qué quiero ir a un
+      Estrella Michelín?
 
 
-      They are both, in fact, acceptable options. But the choice depends on what
-      you are hoping to achieve by translating your product and how far you’d
-      like it to go. Are you trying to grow your brand by translating your
-      website? Submit your short film to a festival? Do you need subtitling for
-      the deaf that really makes media accessible and actually helps its users
-      rather than frustrate them? Then, you want to work with a professional who
-      understands not only the source and target cultures, but also what your
-      goals are, and who helps you get there through translation.
-    color: tint
+      Pues eso, son dos opciones respetables, pero depende de lo que busques y
+      de lo lejos que quieres que llegue tu producto. ¿Quieres ampliar mercado
+      traduciendo la web de tu marca? ¿Presentar tu corto a un festival? ¿Unos
+      subtítulos para sordos que de verdad ayuden e informen en vez de frustrar
+      a quien los usa? Entonces necesitas a alguien que entienda no solo la
+      cultura de origen y la de llegada, sino lo que tú quieres conseguir, y que
+      te ayude a lograrlo mediante la traducción.
+
+
+      Además, a diferencia de las grandes agencias de traducción que trabajan
+      con una bolsa enorme de traductores de todos los idiomas, conmigo tendrás
+      un trato directo y personalizado, sin gestores de proyectos de por medio.
+      No solo recibirás tu traducción más rápido, sino que mimaré el texto al
+      máximo.
+    color: default
     _template: about
 ---
 
