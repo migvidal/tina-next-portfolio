@@ -1,11 +1,11 @@
 ---
 title: Home
 blocks:
-  - title: I'm Alba Vidal
-    subtitle: Audiovisual translator.
+  - title: Soy Alba Vidal
+    subtitle: Traductora audiovisual.
     body: ''
     actions:
-      - label: Contact me!
+      - label: Contacta conmigo
         type: button
         icon: true
         link: '#contact'
@@ -17,92 +17,74 @@ blocks:
       alt: Working
     color: default
     _template: hero
-  - title: Services I offer
+  - title: Servicios que ofrezco
     introduction: >
-      As a **translator**, I work exclusively from English to European Spanish
-      (**EN>ES**). This has allowed me to focus on the audiovisual field and
-      specialize in it, even though I also offer marketing and generalist
-      translation.
+      Como **traductora**, trabajo exclusivamente del inglés al español europeo (variante **EN>ES**). Esto me ha permitido centrarme y especializarme en el campo audiovisual, aunque también realizo traducción publicitaria y generalista.
     service_object:
-      - title: Subtitling
+      - title: Subtitulado
         image:
           src: /uploads/services/ic_process.svg
-          alt: Subtitling
+          alt: Subtitulado
           height: '150'
         bulletpoints:
-          - text: Subtitle translation (EN>ES)
+          - text: Traducción de subtítulos (inglés a español)
           - text: >-
-              Spanish subtitle creation from scratch, including transcription
-              and time-spotting.
-      - title: Dubbing
+              Creación de subtítulos en español desde cero: transcripción y pautado.
+      - title: Doblaje
         image:
           src: /uploads/services/ic_translate.svg
           height: '150'
         bulletpoints:
-          - text: EN>ES translation of dubbing scripts.
-      - title: Accesibility
+          - text: Traducción EN>ES de guiones de doblaje para su posterior ajuste.
+      - title: Accesibilidad
         image:
           src: /uploads/services/ic_web_document.svg
           alt: ''
           height: '120'
         bulletpoints:
           - text: >-
-              Subtitling for the deaf (SDH)/ Closed captions: in English (from a
-              script or transcript) and EN>ES translation.
-          - text: 'Audiodescription: creation of scripts in Spanish.'
+              Subtitulado para sordos (SPS): siguiendo la norma UNE 153010.
+          - text: 'Audiodescripción: creación de guiones en español.'
             dialog:
-              link: What is audiodescription?
-              title: 'What is audiodescription??, you might ask'
+              link: ¿Qué es la audiodescripción?
+              title: 'Pero Alba, ¿qué es la audiodescripción?'
               content: >
-                Well, it’s a voice narration of the visual elements we see on
-                screen, and it aims to make films and TV more accessible for the
-                visually impaired. It’s a beautiful craft, and so necessary. You
-                can read more about it here
-      - title: Proofreading (Spanish)
+                Pues una narración de los elementos visuales de un vídeo, para mejorar el acceso al cine y la TV de las personas con discapacidad (vamos, una cosa muy bonita y necesaria). Más info aquí.
+      - title: Corrección de textos (español)
         image:
           src: /uploads/services/ic_collab_work.svg
-          alt: Proofreading (Spanish)
+          alt: Corrección de textos (español)
           height: '140'
         bulletpoints:
-          - text: ' In addition to translation, I offer full proofreading (spelling, grammar and style) of Spanish originals and translations. Don’t let careless punctuation or odd-sounding calques ruin a good text. As we say in Spain, four eyes see more than two. And yes, I am that annoying friend who walks around pointing at street signs because There’s a missing comma!.'
-      - title: Linguistic Quality Assurance (LQA)
+          - text: 'Además de traducción, ofrezco servicios de revisión ortotipográfica y de estilo, tanto de textos originales en español como de traducciones. ¡No dejes que una puntuación descuidada te estropee un buen texto ni que se te cuele algún anglicismo raro en tu traducción! Cuatro ojos ven más que dos, etcétera. Y sí, soy la típica pesada que va por la calle señalando carteles y diciendo: _ahí sobra una coma_.'
+      - title: 'LQA: Control de calidad lingüístico'
         image:
           src: /uploads/services/ic_like.svg
-          alt: Quality
+          alt: Calidad
         bulletpoints:
           - text: >-
-              Performing final checks on a localized product before its launch
-              is essential to avoid a myriad of possible last minute errors.
+              Ser el último ser humano que comprueba un producto localizado antes de que se publique es… muy necesario. ¡La cantidad de errores de última hora que se evitan así!
           - text: >-
-              LQA is more technical and specific than proofreading, and it
-              involves tasks such as checking style and clients guides, using
-              specific software and implement last minute changes requested by
-              the client. The process usually goes beyond the languages we
-              speak, having to perform checks on tens of languages we don’t
-              know. This is why LQA requires solid linguistic knowledge, as well
-              as the skill of knowing where to look and what to look for.
+              El LQA es más técnico y específico que una corrección de texto, e implica tareas como consultar guías de cliente y de estilo, usar software específico e implementar cambios de última hora. Muchas veces el proceso trasciende los idiomas y se hace control de calidad de lenguas que ni hablamos, por lo que es esencial tener conocimientos de lingüística y saber dónde y cómo mirar.
     color: tint
     _template: translation_services
-  - title: Contact
+  - title: Contacto
     subtitle: >-
-      Do you need translation, proofreading, subtitling or media accessibility
-      services?
+      ¿Necesitas una traducción, corrección, subtitulado o servicio de accesibilidad audiovisual?
     body: >
-      Tell me about your project and let’s get to work. You’re not quite sure
-      what you need? Drop me a line anyway! I will help you figure out what the
-      best option for you is and give you a no obligation quote.
+      Cuéntame y nos ponemos a ello. ¿No sabes muy bien qué necesitas? ¡Escríbeme igual! Te asesoraré y ofreceré un presupuesto sin compromiso.
     name_field:
-      label: Your name
+      label: Tu nombre
       placeholder: John Appleseed
     email_field:
-      label: Your email
+      label: Tu email
       placeholder: johnappleseed@xyz.com
     body_field:
-      label: Message
-      placeholder: I would like to translate...
-    button: Send
+      label: Mensaje
+      placeholder: Me gustaría traducir...
+    button: Enviar
     socials:
-      heading: You can also reach out here
+      heading: 'También puedes encontrarme en:'
       link:
         - network: email
           url: albavidalf@gmail.com
