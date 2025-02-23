@@ -56,7 +56,8 @@ blocks:
                 Well, it’s a voice narration of the visual elements we see on
                 screen, and it aims to make films and TV more accessible for the
                 visually impaired. It’s a beautiful craft, and so necessary. You
-                can read more about it here
+                can read more about it
+                [here](https://www.3playmedia.com/blog/what-is-audio-description/).
       - title: Proofreading (Spanish)
         image:
           src: /uploads/services/ic_collab_work.svg

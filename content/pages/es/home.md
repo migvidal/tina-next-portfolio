@@ -55,7 +55,7 @@ blocks:
                 Pues una narración de los elementos visuales de un vídeo, para
                 mejorar el acceso al cine y la TV de las personas con
                 discapacidad (vamos, una cosa muy bonita y necesaria). Más info
-                aquí.
+                [aquí](https://www.once.es/servicios-sociales/cultura-y-ocio/audiodescripcion-para-quienes-gustan-del-cine-y-del-teatro).
       - title: 'Transcreación, alias traducción de márketing'
         image:
           src: /uploads/services/ic_document.svg
