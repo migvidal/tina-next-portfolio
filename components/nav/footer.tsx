@@ -7,10 +7,9 @@ import { Icon } from "../icon";
 import { FaFacebookF, FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { useLayout } from "../layout/layout-context";
-import { RawRenderer } from "../raw-renderer";
 
 export default function Footer() {
-  const { theme, globalSettings, pageData } = useLayout();
+  const { theme, globalSettings } = useLayout();
   const footer = globalSettings?.footer;
 
   const socialIconClasses = "h-7 w-auto";
@@ -23,7 +22,7 @@ export default function Footer() {
     purple: "text-purple-500 dark:text-purple-400 hover:text-purple-300",
     orange: "text-orange-500 dark:text-orange-400 hover:text-orange-300",
     yellow: "text-yellow-500 dark:text-yellow-400 hover:text-yellow-300",
-    primary: "text-white opacity-80 hover:opacity-100",
+    primary: "text-white opacity-80 hover:opacity-100"
   };
 
   const footerColor = {
@@ -37,8 +36,8 @@ export default function Footer() {
       pink: "text-white from-pink-500 to-pink-600",
       purple: "text-white from-purple-500 to-purple-600",
       orange: "text-white from-orange-500 to-orange-600",
-      yellow: "text-white from-yellow-500 to-yellow-600",
-    },
+      yellow: "text-white from-yellow-500 to-yellow-600"
+    }
   };
 
   const footerColorCss =
@@ -62,7 +61,7 @@ export default function Footer() {
                   theme.color === "primary"
                     ? "primary"
                     : globalSettings?.header.icon.color,
-                style: globalSettings?.header.icon.style,
+                style: globalSettings?.header.icon.style
               }}
               className="inline-block h-10 w-auto group-hover:text-orange-500"
             />
@@ -93,7 +92,7 @@ export default function Footer() {
                   className={`${socialIconClasses} ${
                     socialIconColorClasses[
                       footer.color === "primary" ? "primary" : theme.color
-                    ]
+                      ]
                   }`}
                 />
               </a>
@@ -108,7 +107,7 @@ export default function Footer() {
                   className={`${socialIconClasses} ${
                     socialIconColorClasses[
                       footer.color === "primary" ? "primary" : theme.color
-                    ]
+                      ]
                   }`}
                 />
               </a>
@@ -123,7 +122,7 @@ export default function Footer() {
                   className={`${socialIconClasses} ${
                     socialIconColorClasses[
                       footer.color === "primary" ? "primary" : theme.color
-                    ]
+                      ]
                   }`}
                 />
               </a>
@@ -138,7 +137,7 @@ export default function Footer() {
                   className={`${socialIconClasses} ${
                     socialIconColorClasses[
                       footer.color === "primary" ? "primary" : theme.color
-                    ]
+                      ]
                   }`}
                 />
               </a>
@@ -159,7 +158,7 @@ export default function Footer() {
               </a>
             )}
           </div>
-          <RawRenderer parentColor={footer.color} rawData={pageData} />
+          <span className="h4">Alba Vidal</span>
         </div>
         <div
           className={cn(
@@ -170,6 +169,18 @@ export default function Footer() {
             "to-transparent bottom-0 left-4 right-4 -z-1 opacity-5"
           )}
         />
+      </Container>
+      <hr />
+      <Container className="relative" size="small">
+        <p className="text-gray-400 text-center">Made by <strong><Link href="https://migvidal.com"
+                                                           target="_blank">Migvidal</Link></strong> · Based on <Link
+          href="https://github.com/tinacms/tina-cloud-starter">Tina Cloud Starter</Link> · Images by Björn Andersson
+          from the <Link href="https://thenounproject.com/browse/icons/term/translate/" target="_blank">Noun
+            Project</Link>
+          (CC BY 3.0). Banner image by <Link
+            href="https://www.freepik.com/free-vector/cute-woman-working-laptop-with-fire-cartoon-vector-icon-illustration-people-technology-isolated_32903761.htm#fromView=search&amp;term=woman+computer&amp;page=2&amp;position=13&amp;track=ais&amp;regularType=vector"
+            target="_blank">catalyststuff on Freepik</Link>
+        </p>
       </Container>
     </footer>
   );
