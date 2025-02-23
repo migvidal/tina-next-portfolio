@@ -1,5 +1,5 @@
 ---
-title: Acerca de
+title: About
 blocks:
   - title: Sobre mí
     pfp:
@@ -75,5 +75,4 @@ blocks:
     color: tint
     _template: about
 ---
-
 
