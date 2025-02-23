@@ -4,7 +4,7 @@ import { cn } from "../../lib/utils";
 import { Container } from "../layout/container";
 import Link from "next/link";
 import { Icon } from "../icon";
-import { FaFacebookF, FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaFacebookF, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { useLayout } from "../layout/layout-context";
 
@@ -66,7 +66,7 @@ export default function Footer() {
               className="inline-block h-10 w-auto group-hover:text-orange-500"
             />
           </Link>
-          <div className="flex gap-4">
+          <div className="flex gap-4 items-center">
             {footer.social && footer.social.email && (
               <a
                 className="inline-block opacity-80 hover:opacity-100 transition ease-out duration-150"
@@ -103,13 +103,11 @@ export default function Footer() {
                 href={footer.social.twitter}
                 target="_blank"
               >
-                <FaTwitter
-                  className={`${socialIconClasses} ${
-                    socialIconColorClasses[
-                      footer.color === "primary" ? "primary" : theme.color
-                      ]
-                  }`}
-                />
+                <span className={`font-bold text-2xl -mt-1 ${socialIconClasses} ${
+                  socialIconColorClasses[
+                    footer.color === "primary" ? "primary" : theme.color
+                    ]
+                }`}>𝕏</span>
               </a>
             )}
             {footer.social && footer.social.instagram && (
