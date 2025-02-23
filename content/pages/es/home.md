@@ -101,6 +101,18 @@ blocks:
       label: Message
       placeholder: I would like to translate...
     button: Send
+    socials:
+      heading: You can also reach out here
+      link:
+        - network: email
+          url: albavidalf@gmail.com
+          username: albavidalf@gmail.com
+        - network: linkedin
+          url: 'https://www.linkedin.com/in/albavidalf/'
+          username: albavidalf
+        - network: x
+          url: 'https://www.twitter.com/albavidalf'
+          username: '@albavidalf'
     color: default
     _template: contact_form
 ---

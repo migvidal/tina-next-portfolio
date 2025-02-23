@@ -4,8 +4,77 @@ import { Section } from "../layout/section";
 import { Container } from "../layout/container";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import * as React from "react";
-import { PageBlocksContact_Form } from "../../tina/__generated__/types";
+import {
+  PageBlocksContact_Form,
+  PageBlocksContact_FormSocials,
+  PageBlocksContact_FormSocialsLink
+} from "../../tina/__generated__/types";
 import { toolbarOverrides } from "./toolbar-overrides";
+import Link from "next/link";
+import { FaEnvelope, FaLinkedin } from "react-icons/fa";
+import { FaBluesky, FaFacebook, FaMastodon } from "react-icons/fa6";
+
+const SocialLink = ({ link }: { link: PageBlocksContact_FormSocialsLink }) => {
+  if (!link.network || !link.url || !link.username) return null;
+  let socialLogo;
+  let socialLabel;
+  let href = link.url;
+  switch (link.network) {
+    case "email":
+      socialLogo = <FaEnvelope className="size-4" />;
+      socialLabel = "Email";
+      href = `mailto:${link.url}`;
+      break;
+    case "linkedin":
+      socialLogo = <FaLinkedin className="size-4" />;
+      socialLabel = "LinkedIn";
+      break;
+    case "x":
+      socialLogo = <div className="!-my-2">𝕏</div>;
+      socialLabel = "X";
+      break;
+    case "bluesky":
+      socialLogo = <FaBluesky className="size-4" />;
+      socialLabel = "Bluesky";
+      break;
+    case "mastodon":
+      socialLogo = <FaMastodon className="size-4" />;
+      socialLabel = "Mastodon";
+      break;
+    case "facebook":
+      socialLogo = <FaFacebook className="size-4" />;
+      socialLabel = "Facebook";
+      break;
+  }
+  if (!socialLogo) return null;
+  return (
+    <li className="mx-8 my-2 col-span-4 md:col-span-2">
+      {
+        <Link href={href} className="flex items-center text-lg hover:text-cyan-500">
+          <div
+            className="main-button">
+            {socialLogo}
+          </div>
+          <p data-tina-field={tinaField(link, "network")}
+             className="pl-2 underline underline-offset-8">{`${socialLabel}: ${link.username}`}</p>
+        </Link>
+      }
+    </li>
+  );
+};
+
+const SocialLinks = ({ data }: { data: PageBlocksContact_FormSocials }) => {
+  return (
+    <ul className="grid grid-flow-row auto-rows-max my-4 md:grid-cols-4">
+      <p className="col-span-4 my-4">You can also reach out here</p>
+      {
+        data.link && data.link.map((l, index) => (
+          <SocialLink key={index} link={l} />
+        ))
+      }
+    </ul>
+  );
+};
 
 
 export const ContactForm = ({ data }: { data: PageBlocksContact_Form }) => {
@@ -23,7 +92,8 @@ export const ContactForm = ({ data }: { data: PageBlocksContact_Form }) => {
         }
         {
           data.subtitle && (
-            <p data-tina-field={tinaField(data, "subtitle")} className="text-lg font-bold text-center mb-4">{data.subtitle}</p>
+            <p data-tina-field={tinaField(data, "subtitle")}
+               className="text-lg font-bold text-center mb-4">{data.subtitle}</p>
           )
         }
         {
@@ -88,10 +158,15 @@ export const ContactForm = ({ data }: { data: PageBlocksContact_Form }) => {
           {
             data.button && (
               <button data-tina-field={tinaField(data, "button")} type="submit"
-                      className="btn btn-primary rounded-full px-6 py-4 bg-black text-white">{data.button}</button>
+                      className="main-button">{data.button}</button>
             )
           }
         </form>
+        {
+          data.socials && <div  data-tina-field={tinaField(data, "socials")}>
+            <SocialLinks data={data.socials} />
+          </div>
+        }
       </Container>
     </Section>
   );
@@ -100,105 +175,151 @@ export const ContactForm = ({ data }: { data: PageBlocksContact_Form }) => {
 const defaultContactForm = {
   title: "Contact",
   subtitle: "This is my contact form",
-  body: "This is a longer description",
-}
+  body: "This is a longer description"
+};
 
 const defaultField = {
   label: "Label",
-  placeholder: "Placeholder",
-}
+  placeholder: "Placeholder"
+};
 
 export const contactFormSchema = {
   label: "Contact form",
   name: "contact_form",
   ui: {
     previewSrc: "/blocks/features.png",
-    defaultItem: defaultContactForm,
+    defaultItem: defaultContactForm
   },
   fields: [
     {
       label: "Title",
       name: "title",
-      type: "string",
+      type: "string"
     },
     {
       label: "Subitle",
       name: "subtitle",
-      type: "string",
+      type: "string"
     },
     {
       label: "Body text",
       name: "body",
       type: "rich-text",
-      toolbarOverride: toolbarOverrides,
+      toolbarOverride: toolbarOverrides
     },
     {
       label: "Name field",
       name: "name_field",
       type: "object",
       ui: {
-        defaultItem: defaultField,
+        defaultItem: defaultField
       },
       fields: [
         {
           label: "Label",
           name: "label",
-          type: "string",
+          type: "string"
         },
         {
           label: "Placeholder",
           name: "placeholder",
-          type: "string",
-        },
-      ],
+          type: "string"
+        }
+      ]
     },
     {
       label: "Email field",
       name: "email_field",
       type: "object",
       ui: {
-        defaultItem: defaultField,
+        defaultItem: defaultField
       },
       fields: [
         {
           label: "Label",
           name: "label",
-          type: "string",
+          type: "string"
         },
         {
           label: "Placeholder",
           name: "placeholder",
-          type: "string",
-        },
-      ],
+          type: "string"
+        }
+      ]
     },
     {
       label: "Body field",
       name: "body_field",
       type: "object",
       ui: {
-        defaultItem: defaultField,
+        defaultItem: defaultField
       },
       fields: [
         {
           label: "Label",
           name: "label",
-          type: "string",
+          type: "string"
         },
         {
           label: "Placeholder",
           name: "placeholder",
-          type: "string",
-        },
-      ],
+          type: "string"
+        }
+      ]
     },
     {
       label: "Submit button",
       name: "button",
       ui: {
-        defaultItem: "Send",
+        defaultItem: "Send"
       },
-      type: "string",
+      type: "string"
+    },
+    {
+      label: "Social links",
+      name: "socials",
+      type: "object",
+      fields: [
+        {
+          label: "Heading",
+          name: "heading",
+          type: "string"
+        },
+        {
+          label: "Social links",
+          name: "link",
+          type: "object",
+          list: true,
+          ui: {
+            itemProps: (item) => ({ label: item.network })
+          },
+          fields: [
+            {
+              label: "Social network",
+              name: "network",
+              type: "string",
+              options: [
+                { label: "Email", value: "email" },
+                { label: "LinkedIn", value: "linkedin" },
+                { label: "X", value: "x" },
+                { label: "Bluesky", value: "bluesky" },
+                { label: "Mastodon", value: "mastodon" },
+                { label: "Facebook", value: "facebook" }
+              ]
+            },
+            {
+              label: "URL",
+              name: "url",
+              type: "string"
+            },
+            {
+              label: "Username",
+              name: "username",
+              type: "string"
+            },
+          ]
+        }
+      ]
     },
     {
       type: "string",
@@ -207,8 +328,8 @@ export const contactFormSchema = {
       options: [
         { label: "Default", value: "default" },
         { label: "Tint", value: "tint" },
-        { label: "Primary", value: "primary" },
-      ],
-    },
-  ],
+        { label: "Primary", value: "primary" }
+      ]
+    }
+  ]
 };
