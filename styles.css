@@ -53,3 +53,11 @@
         font-variation-settings: "wght" 999;
     }
 }
+
+.form-input {
+    @apply placeholder:text-gray-500 focus:border-black dark:border-white  bg-gray-100 dark:bg-gray-1000 dark:text-gray-300 w-full rounded border-transparent px-6 py-4 focus:ring-transparent;
+}
+
+.form-label {
+    @apply dark:text-gray-150 mb-4 block text-lg font-bold;
+}

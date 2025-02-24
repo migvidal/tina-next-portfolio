@@ -78,12 +78,11 @@ const SocialLinks = ({ data }: { data: PageBlocksContact_FormSocials }) => {
 
 
 export const ContactForm = ({ data }: { data: PageBlocksContact_Form }) => {
-  const textFieldClass = "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline";
   return (
     <Section color={data.color} id="contact">
       <Container
         size="small"
-        width="small"
+        width="medium"
       >
         {
           data.title && (
@@ -105,7 +104,7 @@ export const ContactForm = ({ data }: { data: PageBlocksContact_Form }) => {
             </p>
           )
         }
-        <form action="https://formspree.io/f/xbldkzkv" method="POST" className="max-w-sm mx-auto">
+        <form action="https://formspree.io/f/xbldkzkv" method="POST" className="max-w-lg mx-auto">
           {
             data.name_field && (
               <div className="mb-6">
@@ -117,7 +116,7 @@ export const ContactForm = ({ data }: { data: PageBlocksContact_Form }) => {
                   data-tina-field={tinaField(data.name_field, "placeholder")}
                   id="name"
                   name="name"
-                  className={textFieldClass}
+                  className="form-input"
                   placeholder={data.name_field.placeholder}
                   type="text" />
               </div>
@@ -133,7 +132,7 @@ export const ContactForm = ({ data }: { data: PageBlocksContact_Form }) => {
                 data-tina-field={tinaField(data.email_field, "placeholder")}
                 id="email"
                 name="email"
-                className={textFieldClass}
+                className="form-input"
                 placeholder={data.email_field.placeholder}
                 type="email" />
             </div>
@@ -149,7 +148,7 @@ export const ContactForm = ({ data }: { data: PageBlocksContact_Form }) => {
                   data-tina-field={tinaField(data.body_field, "placeholder")}
                   id="message"
                   name="message"
-                  className={textFieldClass}
+                  className="form-input"
                   placeholder={data.body_field.placeholder}
                   rows={8}></textarea>
               </div>
