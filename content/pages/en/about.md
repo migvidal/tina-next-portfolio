@@ -1,13 +1,14 @@
 ---
 title: Acerca de
 blocks:
-  - title: Sobre mí
+  - title: About me
     pfp:
       src: /uploads/profile_picture.jpeg
       shape: rounded
     resumelink:
-      label: Mi CV
-      url: 'http://localhost:3000/uploads/resumes/CV-alba-english.pdf'
+      label: My CV
+      url: >-
+        https://assets.tina.io/d7a56995-a479-43af-8daf-f17be4413b44/resumes/CV-alba-english.pdf
     links:
       - name: Cosas que he traducido
         url: 'https://basededatos.atrae.org/user/alba-vidal/'
@@ -75,5 +76,4 @@ blocks:
     color: tint
     _template: about
 ---
-
 
