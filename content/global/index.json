@@ -34,8 +34,8 @@
     }
   },
   "theme": {
-    "color": "blue",
+    "color": "red",
     "font": "nunito",
-    "darkMode": "light"
+    "darkMode": "system"
   }
 }
