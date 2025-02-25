@@ -13,6 +13,9 @@ blocks:
         url: 'https://basededatos.atrae.org/user/alba-vidal/'
       - name: Premios ATRAE 2018
         url: 'https://premios.atrae.org/ganadores-ix-edicion/'
+      - name: Entrevista con La Nueva Crónica
+        url: >-
+          https://www.lanuevacronica.com/nevera/los-subtitulos-para-netflix-se-traducen-desde-leon_117807_102.html
     body: >
       ¡Hola! Soy Alba Vidal, traductora audiovisual. Sí, rima. ¿Casualidad?
       Quién sabe.
