@@ -66,7 +66,7 @@ const SocialLink = ({ link }: { link: PageBlocksContact_FormSocialsLink }) => {
 const SocialLinks = ({ data }: { data: PageBlocksContact_FormSocials }) => {
   return (
     <ul className="grid grid-flow-row auto-rows-max my-4 md:grid-cols-4">
-      <p className="col-span-4 my-4">You can also reach out here</p>
+      {data.heading && <p className="col-span-4 my-4">{data.heading}</p>}
       {
         data.link && data.link.map((l, index) => (
           <SocialLink key={index} link={l} />
