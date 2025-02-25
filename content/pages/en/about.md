@@ -10,9 +10,9 @@ blocks:
       url: >-
         https://assets.tina.io/d7a56995-a479-43af-8daf-f17be4413b44/resumes/CV-alba-english.pdf
     links:
-      - name: Cosas que he traducido
+      - name: Things I have translated
         url: 'https://basededatos.atrae.org/user/alba-vidal/'
-      - name: Premios ATRAE 2018
+      - name: ATRAE Awards 2018
         url: 'https://premios.atrae.org/ganadores-ix-edicion/'
     body: >
       **Hi there! My name is Alba Vidal, audiovisual translator.** “Audiovisual”
