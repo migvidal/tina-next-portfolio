@@ -37,7 +37,7 @@ blocks:
         size: regular
       - src: /uploads/shows/Feminists_What_Were_They_Thinking.jpg
         alt: Feminists What Were They Thinking
-        size: regular
+        size: large
       - src: /uploads/shows/I_Used_to_Be_Famous.jpg
         alt: I Used to Be Famous
         size: regular
@@ -80,6 +80,7 @@ blocks:
         alt: Rebel Cheer Squad
       - src: /uploads/shows/RuPaul_All_Stars.jpg
         alt: RuPaul All Stars
+        size: large
       - src: /uploads/shows/RuPaul_Untucked.jpg
         alt: RuPaul Untucked
       - src: /uploads/shows/RuPaul_poster.jpg
