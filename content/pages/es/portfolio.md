@@ -3,11 +3,11 @@ title: Portfolio
 blocks:
   - title: Portfolio
     introduction: >
-      Here you can find every film and program I have translated.
+      Aquí podéis ver las películas y series que he traducido.
 
 
-      I have also translated several websites and conducted proofreading and
-      linguistic QC for various clients.
+      Además, he realizado varias traducciones web y trabajos de corrección y
+      control de calidad lingüístico para empresas.
     pictures:
       - src: /uploads/shows/AlienXMas.jpg
         alt: Alien XMas
@@ -37,7 +37,7 @@ blocks:
         size: regular
       - src: /uploads/shows/Feminists_What_Were_They_Thinking.jpg
         alt: Feminists What Were They Thinking
-        size: regular
+        size: large
       - src: /uploads/shows/I_Used_to_Be_Famous.jpg
         alt: I Used to Be Famous
         size: regular
@@ -80,6 +80,7 @@ blocks:
         alt: Rebel Cheer Squad
       - src: /uploads/shows/RuPaul_All_Stars.jpg
         alt: RuPaul All Stars
+        size: large
       - src: /uploads/shows/RuPaul_Untucked.jpg
         alt: RuPaul Untucked
       - src: /uploads/shows/RuPaul_poster.jpg
