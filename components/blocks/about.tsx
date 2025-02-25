@@ -105,7 +105,7 @@ export const contentBlockSchema: Template = {
   name: "about",
   label: "About",
   ui: {
-    previewSrc: "/blocks/content.png",
+    previewSrc: "/blocks/about.png",
     defaultItem: {
       body: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.",
     },

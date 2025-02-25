@@ -91,7 +91,7 @@ export const galleryBlockSchema: Template = {
   name: "gallery",
   label: "Photo gallery",
   ui: {
-    previewSrc: "/blocks/content.png",
+    previewSrc: "/blocks/image-gallery.png",
   },
   fields: [
     {

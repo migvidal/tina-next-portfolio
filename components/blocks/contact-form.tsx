@@ -186,7 +186,7 @@ export const contactFormSchema = {
   label: "Contact form",
   name: "contact_form",
   ui: {
-    previewSrc: "/blocks/features.png",
+    previewSrc: "/blocks/contact-form.png",
     defaultItem: defaultContactForm
   },
   fields: [

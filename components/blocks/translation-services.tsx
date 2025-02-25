@@ -141,7 +141,7 @@ export const translationServiceBlockSchema = {
   label: "Translation services",
   name: "translation_services",
   ui: {
-    previewSrc: "/blocks/features.png",
+    previewSrc: "/blocks/translation-services.png",
     itemProps: (item) => {
       return { label: item?.title };
     },
