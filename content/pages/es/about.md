@@ -7,7 +7,8 @@ blocks:
       shape: rounded
     resumelink:
       label: Mi CV
-      url: 'http://localhost:3000/uploads/resumes/CV-alba-english.pdf'
+      url: >-
+        https://assets.tina.io/d7a56995-a479-43af-8daf-f17be4413b44/resumes/CV-alba-english.pdf
     links:
       - name: Cosas que he traducido
         url: 'https://basededatos.atrae.org/user/alba-vidal/'
