@@ -1,7 +1,7 @@
 ---
 title: Acerca de
 blocks:
-  - title: About me
+  - title: About me...
     pfp:
       src: /uploads/profile_picture.jpeg
       shape: rounded
