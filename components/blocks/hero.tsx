@@ -9,7 +9,6 @@ import { Section } from "../layout/section";
 import { Container } from "../layout/container";
 import { Actions } from "./actions";
 import { imageSchema } from "./image-schema";
-import { toolbarOverrides } from "./toolbar-overrides";
 
 export const Hero = ({ data }: { data: PageBlocksHero }) => {
   const headlineColorClasses = {
@@ -147,7 +146,6 @@ export const heroBlockSchema: Template = {
       label: "Body text",
       name: "body",
       type: "rich-text",
-      toolbarOverride: toolbarOverrides,
     },
     {
       name: "actions",

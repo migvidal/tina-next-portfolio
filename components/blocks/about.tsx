@@ -10,7 +10,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink, faFile } from "@fortawesome/free-solid-svg-icons";
-import { toolbarOverrides } from "./toolbar-overrides";
 import { PageBlocksAbout } from "../../tina/__generated__/types";
 
 export const About = ({ data }: { data: PageBlocksAbout }) => {
@@ -189,7 +188,6 @@ export const contentBlockSchema: Template = {
       label: "Body",
       name: "body",
       type: "rich-text",
-      toolbarOverride: toolbarOverrides,
     },
     {
       label: "Color",

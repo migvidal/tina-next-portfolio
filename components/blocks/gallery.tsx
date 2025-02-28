@@ -8,8 +8,6 @@ import Image from "next/image";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
-import { toolbarOverrides } from "./toolbar-overrides";
-
 
 const PictureCell = ({ picture }: { picture: PageBlocksGalleryPictures }) => {
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -103,7 +101,6 @@ export const galleryBlockSchema: Template = {
       label: "Introduction",
       name: "introduction",
       type: "rich-text",
-      toolbarOverride: toolbarOverrides,
     },
     {
       label: "Pictures",

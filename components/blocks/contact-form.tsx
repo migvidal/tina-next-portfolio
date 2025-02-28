@@ -9,7 +9,6 @@ import {
   PageBlocksContact_FormSocials,
   PageBlocksContact_FormSocialsLink
 } from "../../tina/__generated__/types";
-import { toolbarOverrides } from "./toolbar-overrides";
 import Link from "next/link";
 import { FaEnvelope, FaLinkedin } from "react-icons/fa";
 import { FaBluesky, FaFacebook, FaMastodon } from "react-icons/fa6";
@@ -204,7 +203,6 @@ export const contactFormSchema = {
       label: "Body text",
       name: "body",
       type: "rich-text",
-      toolbarOverride: toolbarOverrides
     },
     {
       label: "Name field",

@@ -12,8 +12,6 @@ import {
 import { useLayoutEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import { toolbarOverrides } from "./toolbar-overrides";
-
 
 const ExplanationDialog = ({ dialog }: { dialog: PageBlocksTranslation_ServicesService_ObjectBulletpointsDialog }) => {
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -157,7 +155,6 @@ export const translationServiceBlockSchema = {
       label: "Introduction",
       name: "introduction",
       type: "rich-text",
-      toolbarOverride: toolbarOverrides,
     },
     {
       label: "Services",
@@ -225,7 +222,6 @@ export const translationServiceBlockSchema = {
                   label: "Content",
                   name: "content",
                   type: "rich-text",
-                  toolbarOverride: toolbarOverrides,
                 },
               ],
             },
