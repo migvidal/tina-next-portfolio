@@ -7,11 +7,12 @@ blocks:
     actions:
       - label: Contact me!
         type: button
-        icon: true
-        link: /
+        icon: false
+        link: '#contact'
     image:
-      src: /uploads/working_without_fire.png
-      alt: Macaw caw
+      src: /uploads/image-placeholder.png
+      alt: Working without fire
+      height: ''
     image_on_hover:
       src: /uploads/working_with_fire.png
     color: default
