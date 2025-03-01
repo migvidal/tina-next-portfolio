@@ -2,7 +2,7 @@
 title: Inicio
 blocks:
   - title: Soy Alba Vidal
-    subtitle: Traductora audiovisual.
+    subtitle: Traductora audiovisual
     body: ''
     actions:
       - label: Contacta conmigo
