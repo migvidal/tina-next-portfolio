@@ -11,10 +11,10 @@ blocks:
         link: '#contact'
     image:
       src: /uploads/working_without_fire.png
-      alt: Working with fire
+      alt: Working without fire
     image_on_hover:
       src: /uploads/working_with_fire.png
-      alt: Working
+      alt: Working with fire
     color: default
     _template: hero
   - title: Servicios que ofrezco
