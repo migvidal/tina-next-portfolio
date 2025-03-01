@@ -2,7 +2,7 @@
 title: Home
 blocks:
   - title: I'm Alba Vidal
-    subtitle: Audiovisual translator.
+    subtitle: Audiovisual translator
     body: ''
     actions:
       - label: Contact me!
