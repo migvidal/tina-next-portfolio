@@ -10,6 +10,7 @@ blocks:
       linguistic QC for various clients.
     pictures:
       - src: /uploads/shows/a%20nonsense%20christmas%20sabrina.jpg
+        alt: Sabrina Carpenter
       - src: /uploads/shows/Ransom_Canyon_TV_Series-195027799-large.jpg
         alt: Ransom Canyon
       - src: /uploads/shows/A%20GOOD%20GIRLS%20GUIDE%20TO%20MURDER.jpg
