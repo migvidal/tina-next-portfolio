@@ -3,10 +3,10 @@ title: Portfolio
 blocks:
   - title: Portfolio
     introduction: >
-      Here you can find every film and program I have translated.
+      Here you can find every film and TV show I have translated ino Spanish.
 
 
-      I have also translated several websites and conducted proofreading and
+      I have also localised several websites and conducted proofreading and
       linguistic QC for various clients.
     pictures:
       - src: /uploads/shows/AlienXMas.jpg
