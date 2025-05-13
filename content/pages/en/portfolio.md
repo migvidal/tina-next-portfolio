@@ -9,6 +9,8 @@ blocks:
       I have also localised several websites and conducted proofreading and
       linguistic QC for various clients.
     pictures:
+      - src: /uploads/shows/wonderoos.jpg
+        alt: wonderoos
       - src: /uploads/shows/spirit%20rangers.jpg
         alt: Spirit Rangers
       - src: /uploads/shows/north%20of%20north.jpg
