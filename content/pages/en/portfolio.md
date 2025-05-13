@@ -9,6 +9,8 @@ blocks:
       I have also localised several websites and conducted proofreading and
       linguistic QC for various clients.
     pictures:
+      - src: /uploads/shows/can%20i%20tell%20you%20a%20secret.jpg
+        alt: Can I tell you a secret
       - src: /uploads/shows/a%20nonsense%20christmas%20sabrina.jpg
         alt: Sabrina Carpenter
       - src: /uploads/shows/Ransom_Canyon_TV_Series-195027799-large.jpg
