@@ -9,6 +9,8 @@ blocks:
       I have also localised several websites and conducted proofreading and
       linguistic QC for various clients.
     pictures:
+      - src: /uploads/shows/mike%20epps.jpg
+        alt: Mike Epps
       - src: /uploads/shows/can%20i%20tell%20you%20a%20secret.jpg
         alt: Can I tell you a secret
       - src: /uploads/shows/a%20nonsense%20christmas%20sabrina.jpg
