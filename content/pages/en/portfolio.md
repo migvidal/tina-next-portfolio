@@ -9,6 +9,8 @@ blocks:
       I have also localised several websites and conducted proofreading and
       linguistic QC for various clients.
     pictures:
+      - src: /uploads/shows/my%20next%20guest%20letterman.jpg
+        alt: My Next Guest David Letterman
       - src: /uploads/shows/mike%20epps.jpg
         alt: Mike Epps
       - src: /uploads/shows/can%20i%20tell%20you%20a%20secret.jpg
