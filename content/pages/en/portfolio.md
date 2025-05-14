@@ -3,7 +3,7 @@ title: Portfolio
 blocks:
   - title: Portfolio
     introduction: >
-      Here you can find every film and TV show I have translated ino Spanish. 
+      Here you can find every film and TV show I have translated into Spanish.
 
 
       I have also localised several websites and conducted proofreading and
