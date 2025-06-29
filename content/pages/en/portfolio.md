@@ -29,8 +29,6 @@ blocks:
       - src: /uploads/shows/Nightmare_of_Wolf.jpg
         alt: 'Witcher: Nightmare of the Wolf'
         size: regular
-      - src: /uploads/shows/Queer_Eye.jpg
-        alt: Queer Eye
       - src: /uploads/shows/RuPaul_poster.jpg
         alt: RuPaul's Drag Race
       - src: /uploads/shows/RuPaul_All_Stars.jpg
