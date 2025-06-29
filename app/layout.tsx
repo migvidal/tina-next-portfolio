@@ -11,8 +11,8 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "Tina",
-  description: "Tina Cloud Starter",
+  title: "Alba Vidal",
+  description: "Alba Vidal: audiovisual translator",
 };
 
 export default async function RootLayout({
